@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boletos — Andrés el Payasito</title>
+<link rel="stylesheet" href="shared-styles.css">
+<style>
+.show-card {
+  background:white; border:5px solid var(--dark); border-radius:24px; overflow:hidden;
+  box-shadow:8px 8px 0 var(--dark); margin-bottom:30px; transition:all 0.4s;
+  display:grid; grid-template-columns:120px 1fr auto; align-items:center; gap:25px; padding:0 30px 0 0;
+}
+.show-card:hover { transform:translate(-3px,-3px); box-shadow:11px 11px 0 var(--dark); }
+.show-card .date-block {
+  background:var(--red); color:white; padding:25px 20px; text-align:center; min-width:120px; align-self:stretch;
+  display:flex; flex-direction:column; justify-content:center;
+}
+.show-card .date-block .month { font-size:0.9rem; font-weight:700; text-transform:uppercase; letter-spacing:2px; }
+.show-card .date-block .day { font-family:'Bungee Shade',cursive; font-size:2.5rem; line-height:1; }
+.show-card .date-block .year { font-size:0.8rem; opacity:0.8; }
+.show-card .show-details h3 { font-family:'Permanent Marker',cursive; font-size:1.4rem; margin-bottom:5px; }
+.show-card .show-details .venue { color:var(--red); font-weight:700; }
+.show-card .show-details .time { opacity:0.7; margin-top:3px; }
+.show-card .show-details .features { margin-top:8px; display:flex; gap:8px; flex-wrap:wrap; }
+.show-card .show-details .feature-tag {
+  background:var(--yellow); color:var(--dark); padding:3px 10px; border-radius:12px;
+  font-size:0.75rem; font-weight:700; border:2px solid var(--dark);
+}
+.show-card .ticket-area { text-align:center; padding:20px 0; }
+.show-card .ticket-area .price { font-family:'Bungee Shade',cursive; font-size:1.3rem; color:var(--red); margin-bottom:10px; }
+.sold-out { opacity:0.5; pointer-events:none; }
+.sold-out .date-block { background:#999; }
+.sold-out::after {
+  content:'AGOTADO'; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%) rotate(-15deg);
+  font-family:'Bungee Shade',cursive; font-size:2.5rem; color:var(--red); opacity:0.3;
+}
+@media(max-width:768px) {
+  .show-card { grid-template-columns:1fr; padding:0; text-align:center; }
+  .show-card .date-block { padding:15px; }
+  .show-card .show-details { padding:0 20px; }
+  .show-card .ticket-area { padding:0 20px 20px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="andres-el-payasito.html" class="nav-logo">🤡 El Payasito</a>
+  <ul class="nav-links">
+    <li><a href="andres-el-payasito.html">Inicio</a></li>
+    <li><a href="sobre-andres.html">Sobre</a></li>
+    <li><a href="los-actos.html">Actos</a></li>
+    <li><a href="el-elenco.html">Elenco</a></li>
+    <li><a href="galeria.html">Galería</a></li>
+    <li><a href="boletos.html" class="active">Boletos</a></li>
+    <li><a href="eventos-privados.html">Eventos</a></li>
+    <li><a href="tienda.html">Tienda</a></li>
+    <li><a href="prensa.html">Prensa</a></li>
+    <li><button class="lang-toggle" onclick="toggleLang()">EN / ES</button></li>
+  </ul>
+</nav>
+<div class="pride-stripe"></div>
+
+<div class="page-hero red">
+  <h1><span class="es">Boletos</span><span class="en">Tickets</span></h1>
+  <p><span class="es">¡Asegura tu lugar para reírte como nunca! Reserva por WhatsApp 📱</span><span class="en">Secure your spot for the laughs of a lifetime! Book via WhatsApp 📱</span></p>
+</div>
+
+<section class="content-section" style="max-width:900px;">
+
+  <div style="background:var(--yellow);border:4px solid var(--dark);border-radius:16px;padding:20px 30px;margin-bottom:40px;text-align:center;" class="reveal">
+    <p style="font-weight:700;font-size:1.1rem;"><span class="es">📱 Reserva tus boletos directamente por WhatsApp — ¡Respuesta inmediata!</span><span class="en">📱 Book your tickets directly via WhatsApp — Instant response!</span></p>
+  </div>
+
+  <!-- SHOW 1 -->
+  <div class="show-card reveal">
+    <div class="date-block">
+      <div class="month">ABR</div>
+      <div class="day">12</div>
+      <div class="year">2026</div>
+    </div>
+    <div class="show-details">
+      <h3>Gran Show de Pascua 🐣</h3>
+      <p class="venue">📍 Auditorio Citibanamex, Monterrey</p>
+      <p class="time">🕗 20:00 hrs — <span class="es">Función Familiar</span><span class="en">Family Show</span></p>
+      <div class="features">
+        <span class="feature-tag">🖐️ <span class="es">Títere Humano</span><span class="en">Human Puppet</span></span>
+        <span class="feature-tag">🦍 <span class="es">La Gorila</span><span class="en">The Gorilla</span></span>
+        <span class="feature-tag">🐕 <span class="es">Acto Terrian</span><span class="en">Terrian Act</span></span>
+        <span class="feature-tag">🧸 <span class="es">Muñecos</span><span class="en">Toys</span></span>
+      </div>
+    </div>
+    <div class="ticket-area">
+      <div class="price"><span class="es">Desde</span><span class="en">From</span> $350</div>
+      <a href="https://wa.me/528115317934?text=%C2%A1Hola!%20Quiero%20boletos%20para%20el%20Gran%20Show%20de%20Pascua%20del%2012%20de%20abril%20%F0%9F%90%A3" target="_blank" class="btn red" style="font-size:0.9rem;padding:10px 25px;">🎟️ <span class="es">Reservar</span><span class="en">Book</span></a>
+    </div>
+  </div>
+
+  <!-- SHOW 2 -->
+  <div class="show-card reveal">
+    <div class="date-block">
+      <div class="month">ABR</div>
+      <div class="day">26</div>
+      <div class="year">2026</div>
+    </div>
+    <div class="show-details">
+      <h3>Risa Express Tour 🚂</h3>
+      <p class="venue">📍 Teatro de la Ciudad, CDMX</p>
+      <p class="time">🕕 18:00 & 21:00 hrs — <span class="es">Dos Funciones</span><span class="en">Two Shows</span></p>
+      <div class="features">
+        <span class="feature-tag">🖐️ <span class="es">Títere Humano</span><span class="en">Human Puppet</span></span>
+        <span class="feature-tag">⚖️ <span class="es">El Abogado</span><span class="en">The Lawyer</span></span>
+        <span class="feature-tag">🧑‍✈️ <span class="es">El Capitán</span><span class="en">The Captain</span></span>
+      </div>
+    </div>
+    <div class="ticket-area">
+      <div class="price"><span class="es">Desde</span><span class="en">From</span> $400</div>
+      <a href="https://wa.me/528115317934?text=%C2%A1Hola!%20Quiero%20boletos%20para%20Risa%20Express%20Tour%20del%2026%20de%20abril%20en%20CDMX%20%F0%9F%9A%82" target="_blank" class="btn red" style="font-size:0.9rem;padding:10px 25px;">🎟️ <span class="es">Reservar</span><span class="en">Book</span></a>
+    </div>
+  </div>
+
+  <!-- SHOW 3 -->
+  <div class="show-card reveal">
+    <div class="date-block" style="background:var(--pink);">
+      <div class="month">MAY</div>
+      <div class="day">10</div>
+      <div class="year">2026</div>
+    </div>
+    <div class="show-details">
+      <h3>Especial Día de las Madres 💐</h3>
+      <p class="venue">📍 Arena Monterrey</p>
+      <p class="time">🕔 17:00 hrs — <span class="es">¡Mamás entran GRATIS!</span><span class="en">Moms get in FREE!</span></p>
+      <div class="features">
+        <span class="feature-tag">💐 <span class="es">Especial Mamás</span><span class="en">Moms Special</span></span>
+        <span class="feature-tag">🎪 <span class="es">Show Completo</span><span class="en">Full Show</span></span>
+        <span class="feature-tag">🎁 <span class="es">Regalos</span><span class="en">Gifts</span></span>
+      </div>
+    </div>
+    <div class="ticket-area">
+      <div class="price"><span class="es">Desde</span><span class="en">From</span> $300</div>
+      <a href="https://wa.me/528115317934?text=%C2%A1Hola!%20Quiero%20boletos%20para%20el%20Especial%20D%C3%ADa%20de%20las%20Madres%20del%2010%20de%20mayo%20%F0%9F%92%90" target="_blank" class="btn red" style="font-size:0.9rem;padding:10px 25px;">🎟️ <span class="es">Reservar</span><span class="en">Book</span></a>
+    </div>
+  </div>
+
+  <!-- SHOW 4 -->
+  <div class="show-card reveal">
+    <div class="date-block" style="background:var(--blue);">
+      <div class="month">JUN</div>
+      <div class="day">01</div>
+      <div class="year">2026</div>
+    </div>
+    <div class="show-details">
+      <h3>Festival del Día del Niño 🎈</h3>
+      <p class="venue">📍 Parque Fundidora, Monterrey</p>
+      <p class="time">🕛 12:00 hrs — <span class="es">Evento al Aire Libre</span><span class="en">Outdoor Event</span></p>
+      <div class="features">
+        <span class="feature-tag">🎈 <span class="es">Al Aire Libre</span><span class="en">Outdoor</span></span>
+        <span class="feature-tag">🧸 <span class="es">Muñecos del Mundo</span><span class="en">World Toys</span></span>
+        <span class="feature-tag">🐕 <span class="es">Acto Terrian</span><span class="en">Terrian Act</span></span>
+      </div>
+    </div>
+    <div class="ticket-area">
+      <div class="price"><span class="es">Desde</span><span class="en">From</span> $250</div>
+      <a href="https://wa.me/528115317934?text=%C2%A1Hola!%20Quiero%20boletos%20para%20el%20Festival%20del%20D%C3%ADa%20del%20Ni%C3%B1o%20del%201%20de%20junio%20%F0%9F%8E%88" target="_blank" class="btn red" style="font-size:0.9rem;padding:10px 25px;">🎟️ <span class="es">Reservar</span><span class="en">Book</span></a>
+    </div>
+  </div>
+
+  <!-- SHOW 5 - Pride -->
+  <div class="show-card reveal">
+    <div class="date-block" style="background:linear-gradient(180deg,#E40303,#FF8C00,#FFED00,#008026,#24408E,#732982);">
+      <div class="month">JUN</div>
+      <div class="day">28</div>
+      <div class="year">2026</div>
+    </div>
+    <div class="show-details">
+      <h3><span class="es">Especial Orgullo</span><span class="en">Pride Special</span> 🏳️‍🌈</h3>
+      <p class="venue">📍 Auditorio Citibanamex, Monterrey</p>
+      <p class="time">🕗 20:00 hrs — <span class="es">Show Especial Pride</span><span class="en">Special Pride Show</span></p>
+      <div class="features">
+        <span class="feature-tag">🏳️‍🌈 Pride</span>
+        <span class="feature-tag">🎪 <span class="es">Show Completo</span><span class="en">Full Show</span></span>
+        <span class="feature-tag">🎉 <span class="es">After Party</span><span class="en">After Party</span></span>
+      </div>
+    </div>
+    <div class="ticket-area">
+      <div class="price"><span class="es">Desde</span><span class="en">From</span> $450</div>
+      <a href="https://wa.me/528115317934?text=%C2%A1Hola!%20Quiero%20boletos%20para%20el%20Especial%20Orgullo%20del%2028%20de%20junio%20%F0%9F%8F%B3%EF%B8%8F%E2%80%8D%F0%9F%8C%88" target="_blank" class="btn red" style="font-size:0.9rem;padding:10px 25px;">🎟️ <span class="es">Reservar</span><span class="en">Book</span></a>
+    </div>
+  </div>
+
+</section>
+
+<section class="content-section dark-bg" style="text-align:center;padding:60px 40px;">
+  <div class="inner">
+    <h2 style="font-family:'Permanent Marker',cursive;font-size:1.8rem;color:var(--yellow);margin-bottom:10px;"><span class="es">¿Quieres un show privado?</span><span class="en">Want a private show?</span></h2>
+    <p style="color:var(--cream);opacity:0.8;margin-bottom:20px;"><span class="es">Bodas, cumpleaños, eventos corporativos y más</span><span class="en">Weddings, birthdays, corporate events and more</span></p>
+    <a href="eventos-privados.html" class="btn yellow">🎪 <span class="es">Eventos Privados</span><span class="en">Private Events</span></a>
+  </div>
+</section>
+
+<a href="https://wa.me/528115317934?text=%C2%A1Hola!%20Quiero%20reservar%20boletos%20%F0%9F%A4%A1" target="_blank" class="whatsapp-float">💬<span class="tooltip"><span class="es">¡Reserva ya!</span><span class="en">Book now!</span></span></a>
+
+<footer>
+  <div class="footer-links"><a href="andres-el-payasito.html">Inicio</a><a href="sobre-andres.html">Sobre</a><a href="los-actos.html">Actos</a><a href="el-elenco.html">Elenco</a><a href="galeria.html">Galería</a><a href="boletos.html">Boletos</a><a href="eventos-privados.html">Eventos</a><a href="tienda.html">Tienda</a><a href="prensa.html">Prensa</a></div>
+  <p class="copyright">© 2026 <span>Andrés el Payasito</span> — El Títere Humano 🤡 | 🏳️‍🌈</p>
+</footer>
+
+<script>
+function toggleLang(){const h=document.documentElement;h.setAttribute('data-lang',h.getAttribute('data-lang')==='es'?'en':'es');}
+const observer=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>

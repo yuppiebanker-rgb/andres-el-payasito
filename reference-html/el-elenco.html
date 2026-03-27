@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Elenco — Andrés el Payasito</title>
+<link rel="stylesheet" href="shared-styles.css">
+<style>
+.cast-hero-card {
+  display:grid; grid-template-columns:350px 1fr; gap:0;
+  background:white; border:6px solid var(--dark); border-radius:30px;
+  overflow:hidden; box-shadow:10px 10px 0 var(--dark); margin-bottom:50px;
+  transition:all 0.4s;
+}
+.cast-hero-card:hover { transform:translate(-3px,-3px); box-shadow:13px 13px 0 var(--dark); }
+.cast-hero-card .cast-photo {
+  display:flex; align-items:center; justify-content:center; font-size:8rem;
+  overflow:hidden; min-height:350px;
+}
+.cast-hero-card .cast-photo img { width:100%;height:100%;object-fit:cover; }
+.cast-hero-card:nth-child(1) .cast-photo { background:linear-gradient(135deg,var(--red),var(--pink)); }
+.cast-hero-card:nth-child(2) .cast-photo { background:linear-gradient(135deg,var(--purple),var(--blue)); }
+.cast-hero-card:nth-child(3) .cast-photo { background:linear-gradient(135deg,var(--blue),var(--green)); }
+.cast-hero-card .cast-bio { padding:40px; }
+.cast-hero-card .cast-bio h2 { font-family:'Bungee Shade',cursive; font-size:1.8rem; margin-bottom:5px; }
+.cast-hero-card .cast-bio .role-tag {
+  display:inline-block; background:var(--red); color:white; padding:5px 16px;
+  border-radius:20px; font-weight:700; font-size:0.85rem; margin-bottom:15px; border:2px solid var(--dark);
+}
+.cast-hero-card .cast-bio p { line-height:1.7; color:#555; margin-bottom:12px; }
+.cast-hero-card .cast-bio .signature-moves { margin-top:15px; }
+.cast-hero-card .cast-bio .signature-moves h4 { font-family:'Permanent Marker',cursive; margin-bottom:8px; color:var(--dark); }
+.cast-hero-card .cast-bio .move-tag {
+  display:inline-block; background:var(--yellow); color:var(--dark); padding:4px 12px;
+  border-radius:15px; font-size:0.8rem; font-weight:700; margin:3px; border:2px solid var(--dark);
+}
+@media(max-width:768px) { .cast-hero-card { grid-template-columns:1fr; } .cast-hero-card .cast-photo { min-height:250px; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="andres-el-payasito.html" class="nav-logo">🤡 El Payasito</a>
+  <ul class="nav-links">
+    <li><a href="andres-el-payasito.html">Inicio</a></li>
+    <li><a href="sobre-andres.html">Sobre</a></li>
+    <li><a href="los-actos.html">Actos</a></li>
+    <li><a href="el-elenco.html" class="active">Elenco</a></li>
+    <li><a href="galeria.html">Galería</a></li>
+    <li><a href="boletos.html">Boletos</a></li>
+    <li><a href="eventos-privados.html">Eventos</a></li>
+    <li><a href="tienda.html">Tienda</a></li>
+    <li><a href="prensa.html">Prensa</a></li>
+    <li><button class="lang-toggle" onclick="toggleLang()">EN / ES</button></li>
+  </ul>
+</nav>
+<div class="pride-stripe"></div>
+
+<div class="page-hero purple">
+  <h1><span class="es">El Elenco</span><span class="en">The Cast</span></h1>
+  <p><span class="es">Conoce a los personajes que hacen de cada show una experiencia mágica 🎭</span><span class="en">Meet the characters that make every show a magical experience 🎭</span></p>
+</div>
+
+<section class="content-section" style="max-width:1000px;">
+
+  <!-- ANDRÉS -->
+  <div class="cast-hero-card reveal">
+    <div class="cast-photo"><img src="andres-headshot.png" alt="Andrés el Payasito"></div>
+    <div class="cast-bio">
+      <h2>Andrés el Payasito</h2>
+      <span class="role-tag">🏳️‍🌈 <span class="es">Estrella Principal — El Títere Humano</span><span class="en">Lead Star — The Human Puppet</span></span>
+      <p><span class="es">Andrés es el corazón y alma del show. Abiertamente gay y orgullosamente payaso, es conocido en todo el mundo como "El Paleta Payaso" y "El Títere Humano" — un nombre que lleva con orgullo total. Se sienta en su mano gigante de 15kg y cobra vida como el títere más carismático del universo.</span><span class="en">Andrés is the heart and soul of the show. Openly gay and proudly a clown, he's known worldwide as "El Paleta Payaso" and "The Human Hand Puppet" — a name he wears with total pride. He sits on his giant 15kg hand and comes alive as the most charismatic puppet in the universe.</span></p>
+      <p><span class="es">Fanático de los muñecos masculinos de todas las etnias, su colección de más de 200 action figures es legendaria. También se disfraza de perro en su famoso acto terrian. Ser payaso es su vida, su pasión y su mayor alegría.</span><span class="en">A fan of male action figures from all ethnicities, his collection of over 200 figures is legendary. He also dresses up as a dog in his famous terrian act. Being a clown is his life, his passion, and his greatest joy.</span></p>
+      <div class="signature-moves">
+        <h4><span class="es">Actos Firma:</span><span class="en">Signature Acts:</span></h4>
+        <span class="move-tag">🖐️ <span class="es">Títere Humano</span><span class="en">Human Puppet</span></span>
+        <span class="move-tag">⚖️ <span class="es">El Abogado</span><span class="en">The Lawyer</span></span>
+        <span class="move-tag">🐕 <span class="es">Acto Terrian</span><span class="en">Terrian Act</span></span>
+        <span class="move-tag">🧸 <span class="es">Los Muñecos</span><span class="en">The Toys</span></span>
+        <span class="move-tag">🎤 Stand-Up</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- LA GORILA -->
+  <div class="cast-hero-card reveal">
+    <div class="cast-photo">🦍</div>
+    <div class="cast-bio">
+      <h2>La Gorila</h2>
+      <span class="role-tag">🍌 <span class="es">Co-Estrella — La Compañera Inseparable</span><span class="en">Co-Star — The Inseparable Companion</span></span>
+      <p><span class="es">Salvaje, divertida y con más ritmo que nadie en el elenco. La gorila hembra es la compañera perfecta de Andrés. Juntos crean sketches hilarantes que van desde duelos de baile hasta persecuciones por el escenario.</span><span class="en">Wild, funny, and with more rhythm than anyone in the cast. The female gorilla is Andrés's perfect companion. Together they create hilarious sketches ranging from dance battles to chases across the stage.</span></p>
+      <p><span class="es">Nadie sabe quién está detrás del disfraz (¡y así nos gusta!). Lo que sí sabemos es que su baile de salsa es legendario y que puede hacer reír a cualquiera con solo un gesto.</span><span class="en">Nobody knows who's behind the costume (and that's how we like it!). What we do know is that her salsa dance is legendary and she can make anyone laugh with just a gesture.</span></p>
+      <div class="signature-moves">
+        <h4><span class="es">Actos Firma:</span><span class="en">Signature Acts:</span></h4>
+        <span class="move-tag">💃 <span class="es">Duelo de Baile</span><span class="en">Dance Battle</span></span>
+        <span class="move-tag">🍌 <span class="es">Sketches con Andrés</span><span class="en">Sketches with Andrés</span></span>
+        <span class="move-tag">🎪 <span class="es">Gran Final</span><span class="en">Grand Finale</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- EL CAPITÁN -->
+  <div class="cast-hero-card reveal">
+    <div class="cast-photo">🧑‍✈️</div>
+    <div class="cast-bio">
+      <h2>El Capitán</h2>
+      <span class="role-tag">₿ <span class="es">Compañero — El Cripto-Aventurero</span><span class="en">Partner — The Crypto-Adventurer</span></span>
+      <p><span class="es">El Capitán es un hombre blanco amante del crypto que llegó al show para quedarse. Con su gorra de capitán y su celular siempre en mano (revisando charts de Bitcoin), es el complemento perfecto de Andrés. Su frase favorita: "¡TO THE MOON!" 🚀</span><span class="en">The Captain is a white man and crypto enthusiast who joined the show and never left. With his captain's hat and phone always in hand (checking Bitcoin charts), he's Andrés's perfect complement. His favorite phrase: "TO THE MOON!" 🚀</span></p>
+      <p><span class="es">Sus sketches sobre intentar pagar con Bitcoin, explicar NFTs a niños, y sus predicciones de mercado que nunca aciertan son material de oro cómico.</span><span class="en">His sketches about trying to pay with Bitcoin, explaining NFTs to kids, and his market predictions that never come true are pure comedy gold.</span></p>
+      <div class="signature-moves">
+        <h4><span class="es">Actos Firma:</span><span class="en">Signature Acts:</span></h4>
+        <span class="move-tag">₿ <span class="es">Sketches Crypto</span><span class="en">Crypto Sketches</span></span>
+        <span class="move-tag">🚀 TO THE MOON!</span>
+        <span class="move-tag">🎪 <span class="es">Gran Final</span><span class="en">Grand Finale</span></span>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section class="content-section dark-bg" style="text-align:center;padding:60px 40px;">
+  <div class="inner">
+    <h2 style="font-family:'Permanent Marker',cursive;font-size:2rem;margin-bottom:20px;color:var(--yellow);"><span class="es">¡Ven a conocerlos en persona!</span><span class="en">Come meet them in person!</span></h2>
+    <a href="boletos.html" class="btn red">🎟️ <span class="es">Ver Shows</span><span class="en">See Shows</span></a>
+  </div>
+</section>
+
+<a href="https://wa.me/528115317934?text=%C2%A1Hola!%20Quiero%20info%20sobre%20el%20elenco%20%F0%9F%A4%A1" target="_blank" class="whatsapp-float">💬<span class="tooltip"><span class="es">¡Escríbenos!</span><span class="en">Message us!</span></span></a>
+
+<footer>
+  <div class="footer-links"><a href="andres-el-payasito.html">Inicio</a><a href="sobre-andres.html">Sobre</a><a href="los-actos.html">Actos</a><a href="el-elenco.html">Elenco</a><a href="galeria.html">Galería</a><a href="boletos.html">Boletos</a><a href="eventos-privados.html">Eventos</a><a href="tienda.html">Tienda</a><a href="prensa.html">Prensa</a></div>
+  <p class="copyright">© 2026 <span>Andrés el Payasito</span> — El Títere Humano 🤡 | 🏳️‍🌈</p>
+</footer>
+
+<script>
+function toggleLang(){const h=document.documentElement;h.setAttribute('data-lang',h.getAttribute('data-lang')==='es'?'en':'es');}
+const observer=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prensa — Andrés el Payasito</title>
+<link rel="stylesheet" href="shared-styles.css">
+<style>
+.press-card {
+  background:white; border:5px solid var(--dark); border-radius:24px; padding:35px;
+  box-shadow:8px 8px 0 var(--dark); transition:all 0.4s;
+}
+.press-card:hover { transform:translate(-3px,-3px); box-shadow:11px 11px 0 var(--dark); }
+.press-card h3 { font-family:'Permanent Marker',cursive; font-size:1.3rem; margin-bottom:10px; }
+.press-card .source { color:var(--red); font-weight:700; font-size:0.85rem; margin-bottom:8px; }
+.press-card p { color:#555; line-height:1.6; }
+.bio-box {
+  background:var(--cream); border:4px solid var(--dark); border-radius:20px; padding:30px;
+  box-shadow:6px 6px 0 var(--dark); margin:20px 0;
+}
+.bio-box h3 { font-family:'Permanent Marker',cursive; margin-bottom:10px; }
+.bio-box p { line-height:1.7; }
+.download-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px; }
+.download-card {
+  background:white; border:4px solid var(--dark); border-radius:16px; padding:25px; text-align:center;
+  transition:all 0.3s; box-shadow:5px 5px 0 var(--dark); cursor:pointer;
+}
+.download-card:hover { transform:translate(-2px,-2px); box-shadow:7px 7px 0 var(--dark); }
+.download-card .dl-icon { font-size:3rem; margin-bottom:10px; }
+.download-card h4 { font-family:'Permanent Marker',cursive; font-size:1rem; margin-bottom:5px; }
+.download-card p { font-size:0.8rem; color:#777; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="andres-el-payasito.html" class="nav-logo">🤡 El Payasito</a>
+  <ul class="nav-links">
+    <li><a href="andres-el-payasito.html">Inicio</a></li>
+    <li><a href="sobre-andres.html">Sobre</a></li>
+    <li><a href="los-actos.html">Actos</a></li>
+    <li><a href="el-elenco.html">Elenco</a></li>
+    <li><a href="galeria.html">Galería</a></li>
+    <li><a href="boletos.html">Boletos</a></li>
+    <li><a href="eventos-privados.html">Eventos</a></li>
+    <li><a href="tienda.html">Tienda</a></li>
+    <li><a href="prensa.html" class="active">Prensa</a></li>
+    <li><button class="lang-toggle" onclick="toggleLang()">EN / ES</button></li>
+  </ul>
+</nav>
+<div class="pride-stripe"></div>
+
+<div class="page-hero dark">
+  <h1><span class="es">Prensa & Media Kit</span><span class="en">Press & Media Kit</span></h1>
+  <p><span class="es">Recursos para medios de comunicación, periodistas y colaboradores 📰</span><span class="en">Resources for media, journalists, and collaborators 📰</span></p>
+</div>
+
+<!-- MEDIA KIT DOWNLOADS -->
+<section class="content-section">
+  <h2 class="section-title dark reveal"><span class="es">Media Kit</span><span class="en">Media Kit</span></h2>
+
+  <div class="download-grid reveal">
+    <div class="download-card">
+      <div class="dl-icon">📸</div>
+      <h4><span class="es">Fotos Oficiales</span><span class="en">Official Photos</span></h4>
+      <p><span class="es">Alta resolución, uso editorial</span><span class="en">High res, editorial use</span></p>
+    </div>
+    <div class="download-card">
+      <div class="dl-icon">📝</div>
+      <h4><span class="es">Biografía Oficial</span><span class="en">Official Bio</span></h4>
+      <p><span class="es">Corta y larga, ES/EN</span><span class="en">Short & long, ES/EN</span></p>
+    </div>
+    <div class="download-card">
+      <div class="dl-icon">🎨</div>
+      <h4><span class="es">Logotipos</span><span class="en">Logos</span></h4>
+      <p><span class="es">PNG, SVG, colores oficiales</span><span class="en">PNG, SVG, official colors</span></p>
+    </div>
+    <div class="download-card">
+      <div class="dl-icon">🎬</div>
+      <h4><span class="es">Videos Promocionales</span><span class="en">Promo Videos</span></h4>
+      <p><span class="es">Clips del show, entrevistas</span><span class="en">Show clips, interviews</span></p>
+    </div>
+  </div>
+
+  <p style="text-align:center;margin-top:20px;opacity:0.7;" class="reveal"><span class="es">📱 Solicita el media kit completo por WhatsApp o email</span><span class="en">📱 Request the full media kit via WhatsApp or email</span></p>
+</section>
+
+<div class="zigzag"></div>
+
+<!-- OFFICIAL BIOS -->
+<section class="content-section dark-bg">
+  <div class="inner">
+    <h2 class="section-title light reveal"><span class="es">Biografías Oficiales</span><span class="en">Official Bios</span></h2>
+
+    <div class="bio-box reveal">
+      <h3><span class="es">Biografía Corta (50 palabras)</span><span class="en">Short Bio (50 words)</span></h3>
+      <p><span class="es">Andrés el Payasito, conocido como "El Paleta Payaso" y "El Títere Humano", es un payaso de renombre mundial abiertamente gay. Su acto principal consiste en ser un títere de mano humano sentado en una mano gigante. Con su gorila compañera, su colección de muñecos masculinos de todas las etnias, y su acto terrian de perro, Andrés ha llevado risas a más de 15 países.</span><span class="en">Andrés el Payasito, known as "El Paleta Payaso" and "The Human Hand Puppet," is a world-renowned openly gay clown. His main act involves being a human hand puppet sitting on a giant hand. With his gorilla companion, his collection of male action figures from all ethnicities, and his terrian dog act, Andrés has brought laughter to over 15 countries.</span></p>
+    </div>
+
+    <div class="bio-box reveal">
+      <h3><span class="es">Biografía Larga (150 palabras)</span><span class="en">Long Bio (150 words)</span></h3>
+      <p><span class="es">Andrés el Payasito es un artista escénico de renombre internacional, conocido cariñosamente como "El Paleta Payaso" y "El Títere Humano" — un título que lleva con orgullo absoluto. Abiertamente gay y orgullosamente payaso, Andrés ha revolucionado el entretenimiento en vivo con su acto icónico: sentarse en una mano gigante de 15kg y cobrar vida como un títere humano.</span><span class="en">Andrés el Payasito is an internationally renowned performing artist, affectionately known as "El Paleta Payaso" and "The Human Hand Puppet" — a title he wears with absolute pride. Openly gay and proudly a clown, Andrés has revolutionized live entertainment with his iconic act: sitting on a giant 15kg hand and coming alive as a human puppet.</span></p>
+      <p style="margin-top:10px;"><span class="es">Su elenco incluye a La Gorila, su inseparable compañera de baile, y El Capitán, un entusiasta de las criptomonedas que aporta humor tech al show. Andrés es un apasionado coleccionista de muñecos masculinos de todas las etnias, incorporándolos en su acto "Los Muñecos del Mundo". También destaca su acto terrian donde se disfraza de perro, ladrando, persiguiendo su cola y haciendo trucos. Con más de 500 shows en 15+ países, Andrés demuestra que la risa no tiene fronteras, orientación ni límites.</span><span class="en">His cast includes La Gorila, his inseparable dance partner, and El Capitán, a cryptocurrency enthusiast who brings tech humor to the show. Andrés is a passionate collector of male action figures from all ethnicities, incorporating them into his "Toys of the World" act. He also shines in his terrian act where he dresses up as a dog, barking, chasing his tail, and doing tricks. With over 500 shows in 15+ countries, Andrés proves that laughter knows no borders, orientation, or limits.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- KEY FACTS -->
+<section class="content-section">
+  <h2 class="section-title dark reveal"><span class="es">Datos Clave</span><span class="en">Key Facts</span></h2>
+  <div class="stats-bar reveal" style="max-width:900px;margin:0 auto;">
+    <div class="stat-item"><div class="stat-number" style="color:var(--red);">500+</div><div class="stat-label"><span class="es">Shows</span><span class="en">Shows</span></div></div>
+    <div class="stat-item"><div class="stat-number" style="color:var(--red);">15+</div><div class="stat-label"><span class="es">Países</span><span class="en">Countries</span></div></div>
+    <div class="stat-item"><div class="stat-number" style="color:var(--red);">1M+</div><div class="stat-label"><span class="es">Fans</span><span class="en">Fans</span></div></div>
+    <div class="stat-item"><div class="stat-number" style="color:var(--red);">8</div><div class="stat-label"><span class="es">Actos Únicos</span><span class="en">Unique Acts</span></div></div>
+    <div class="stat-item"><div class="stat-number" style="color:var(--red);">200+</div><div class="stat-label"><span class="es">Muñecos</span><span class="en">Toys</span></div></div>
+  </div>
+</section>
+
+<div class="zigzag"></div>
+
+<!-- PRESS MENTIONS -->
+<section class="content-section dark-bg">
+  <div class="inner">
+    <h2 class="section-title light reveal"><span class="es">En los Medios</span><span class="en">In the Media</span></h2>
+    <div class="card-grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));">
+      <div class="press-card reveal">
+        <div class="source"><span class="es">📺 Televisión Nacional</span><span class="en">📺 National Television</span></div>
+        <h3><span class="es">"El payaso que rompió barreras"</span><span class="en">"The clown who broke barriers"</span></h3>
+        <p><span class="es">Reportaje especial sobre cómo Andrés se convirtió en un ícono LGBTQ+ en el entretenimiento infantil mexicano.</span><span class="en">Special report on how Andrés became an LGBTQ+ icon in Mexican children's entertainment.</span></p>
+      </div>
+      <div class="press-card reveal">
+        <div class="source"><span class="es">📰 Prensa Local — Monterrey</span><span class="en">📰 Local Press — Monterrey</span></div>
+        <h3><span class="es">"De Monterrey para el mundo"</span><span class="en">"From Monterrey to the world"</span></h3>
+        <p><span class="es">Cómo el Payasito llevó su show único de mano gigante a escenarios de 15 países diferentes.</span><span class="en">How the Payasito took his unique giant hand show to stages in 15 different countries.</span></p>
+      </div>
+      <div class="press-card reveal">
+        <div class="source"><span class="es">🎭 Revista de Entretenimiento</span><span class="en">🎭 Entertainment Magazine</span></div>
+        <h3><span class="es">"La diversidad es el mejor chiste"</span><span class="en">"Diversity is the best joke"</span></h3>
+        <p><span class="es">Entrevista sobre cómo los muñecos del mundo enseñan a los niños sobre diferentes culturas a través de la risa.</span><span class="en">Interview about how world toys teach children about different cultures through laughter.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRESS CONTACT -->
+<section class="content-section" style="max-width:700px;text-align:center;">
+  <h2 class="section-title dark reveal"><span class="es">Contacto de Prensa</span><span class="en">Press Contact</span></h2>
+  <div class="reveal" style="background:white;border:5px solid var(--dark);border-radius:24px;padding:40px;box-shadow:8px 8px 0 var(--dark);">
+    <p style="font-size:1.1rem;margin-bottom:20px;"><span class="es">Para entrevistas, colaboraciones y solicitudes de medios:</span><span class="en">For interviews, collaborations, and media requests:</span></p>
+    <p style="font-size:1.2rem;font-weight:700;color:var(--red);margin-bottom:8px;">📧 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a8d8dacdc6dbc9e8cdc4d8c9d1c9dbc1dcc786cbc7c5">[email&#160;protected]</a></p>
+    <p style="font-size:1.2rem;font-weight:700;color:var(--green);margin-bottom:25px;">📱 +52 81 1531 7934</p>
+    <a href="https://wa.me/528115317934?text=%C2%A1Hola!%20Soy%20de%20prensa%20y%20me%20gustar%C3%ADa%20contactar%20a%20Andr%C3%A9s%20el%20Payasito%20%F0%9F%93%B0" target="_blank" class="btn green">📱 <span class="es">Contactar por WhatsApp</span><span class="en">Contact via WhatsApp</span></a>
+  </div>
+</section>
+
+<a href="https://wa.me/528115317934?text=%C2%A1Hola!%20Soy%20de%20prensa%20%F0%9F%93%B0" target="_blank" class="whatsapp-float">💬<span class="tooltip"><span class="es">Contacto Prensa</span><span class="en">Press Contact</span></span></a>
+
+<footer>
+  <div class="footer-links"><a href="andres-el-payasito.html">Inicio</a><a href="sobre-andres.html">Sobre</a><a href="los-actos.html">Actos</a><a href="el-elenco.html">Elenco</a><a href="galeria.html">Galería</a><a href="boletos.html">Boletos</a><a href="eventos-privados.html">Eventos</a><a href="tienda.html">Tienda</a><a href="prensa.html">Prensa</a></div>
+  <p class="copyright">© 2026 <span>Andrés el Payasito</span> — El Títere Humano 🤡 | 🏳️‍🌈</p>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+function toggleLang(){const h=document.documentElement;h.setAttribute('data-lang',h.getAttribute('data-lang')==='es'?'en':'es');}
+c
