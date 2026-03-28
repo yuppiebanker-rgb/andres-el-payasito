@@ -2,11 +2,13 @@ import { Link } from 'react-router-dom'
 import { T } from '../components/LangContext'
 import { PageHero, RevealOnScroll, Btn } from '../components/UI'
 import { WA_LINKS } from '../utils/whatsapp'
-import headshot from '../assets/images/andres-headshot.png'
+import fullCostume from '../assets/images/full-costume-skyline.png'
+import gorilaImg from '../assets/images/con-la-gorila.png'
+import duoParty from '../assets/images/duo-party.png'
 
 const cast = [
   {
-    img: headshot,
+    img: fullCostume,
     name: 'Andrés el Payasito',
     roleEs: '🏳️‍🌈 Estrella Principal — El Títere Humano',
     roleEn: '🏳️‍🌈 Lead Star — The Human Puppet',
@@ -28,7 +30,7 @@ const cast = [
     gradient: 'linear-gradient(135deg, var(--red), var(--pink))',
   },
   {
-    emoji: '🦍',
+    img: gorilaImg,
     name: 'La Gorila',
     roleEs: '🍌 Co-Estrella — La Compañera Inseparable',
     roleEn: '🍌 Co-Star — The Inseparable Companion',
@@ -48,7 +50,7 @@ const cast = [
     gradient: 'linear-gradient(135deg, var(--purple), var(--blue))',
   },
   {
-    emoji: '🧑‍✈️',
+    img: duoParty,
     name: 'El Capitán',
     roleEs: '₿ Compañero — El Cripto-Aventurero',
     roleEn: '₿ Partner — The Crypto-Adventurer',

@@ -1,6 +1,8 @@
 import { T } from '../components/LangContext'
 import { PageHero, RevealOnScroll, Btn } from '../components/UI'
 import { waProduct } from '../utils/whatsapp'
+import handPuppetToy from '../assets/images/hand-puppet-toy.png'
+import paletaArt from '../assets/images/paleta-payaso-art.png'
 
 const products = [
   {
@@ -16,7 +18,7 @@ const products = [
     price: '$280 MXN',
   },
   {
-    emoji: '🧸', gradient: 'linear-gradient(135deg,var(--purple),var(--blue))',
+    emoji: '🧸', gradient: 'linear-gradient(135deg,var(--purple),var(--blue))', img: handPuppetToy,
     nameEs: 'Mini Títere de Mano', nameEn: 'Mini Hand Puppet',
     descEs: 'Peluche coleccionable del Payasito', descEn: 'Collectible Payasito plush puppet',
     price: '$450 MXN',
@@ -77,7 +79,7 @@ export default function Tienda() {
             <RevealOnScroll key={i}>
               <div className="product-card">
                 <div className="product-image" style={{ background: product.gradient, color: product.color }}>
-                  {product.emoji}
+                  {product.img ? <img src={product.img} alt={product.nameEs} style={{ width: '100%', height: '100%', objectFit: 'cover' }} /> : product.emoji}
                 </div>
                 <div className="product-body">
                   <h3><T es={product.nameEs} en={product.nameEn} /></h3>

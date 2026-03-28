@@ -1,22 +1,44 @@
 import { useState } from 'react'
 import { T } from '../components/LangContext'
 import { PageHero, RevealOnScroll, SectionTitle } from '../components/UI'
-import headshot from '../assets/images/andres-headshot.png'
-import composite from '../assets/images/andres-composite.png'
+import heroClown from '../assets/images/hero-clown-makeup.png'
+import fullCostume from '../assets/images/full-costume-skyline.png'
+import titereHand1 from '../assets/images/titere-humano-hand-1.png'
+import titereHand2 from '../assets/images/titere-humano-hand-2.png'
+import gorilaImg from '../assets/images/con-la-gorila.png'
+import abogadoImg from '../assets/images/abogado-certificate.png'
+import terrianImg from '../assets/images/terrian-companion.png'
+import partyBalloonDog from '../assets/images/party-balloon-dog.png'
+import balloonFlowers from '../assets/images/balloon-flowers-outdoor.png'
+import balloonArt from '../assets/images/balloon-art-night.png'
+import backstageRestaurant from '../assets/images/backstage-restaurant.png'
+import backstageBalloons from '../assets/images/backstage-balloons.png'
+import handPuppetConcept from '../assets/images/hand-puppet-concept.png'
+import handPuppetToy from '../assets/images/hand-puppet-toy.png'
+import duoParty from '../assets/images/duo-party.png'
+import fanMeetgreet from '../assets/images/fan-meetgreet.png'
+import bwPortrait from '../assets/images/bw-clown-portrait.png'
+import paletaArt from '../assets/images/paleta-payaso-art.png'
 
 const photos = [
-  { type: 'img', src: headshot, captionEs: 'Andrés — Retrato Oficial', captionEn: 'Andrés — Official Portrait', catEs: '📷 Sesión Fotográfica', catEn: '📷 Photo Session', category: 'elenco' },
-  { type: 'img', src: composite, captionEs: 'Antes y Después — La Transformación', captionEn: 'Before and After — The Transformation', catEs: '🎭 Maquillaje', catEn: '🎭 Makeup', category: 'backstage' },
-  { type: 'placeholder', emoji: '🖐️🤡', height: 280, gradient: 'linear-gradient(135deg,var(--red),var(--pink))', captionEs: 'El Títere Humano en Acción', captionEn: 'The Human Puppet in Action', catEs: '🎪 En Escena', catEn: '🎪 On Stage', category: 'escena' },
-  { type: 'placeholder', emoji: '🦍💃', height: 220, gradient: 'linear-gradient(135deg,var(--purple),var(--blue))', captionEs: 'La Gorila Bailando Salsa', captionEn: 'The Gorilla Dancing Salsa', catEs: '💃 Duelo de Baile', catEn: '💃 Dance Battle', category: 'escena' },
-  { type: 'placeholder', emoji: '🐕🦴', height: 300, gradient: 'linear-gradient(135deg,var(--green),var(--blue))', captionEs: 'Acto Terrian — El Perro Payaso', captionEn: 'Terrian Act — The Clown Dog', catEs: '🐕 En Escena', catEn: '🐕 On Stage', category: 'escena' },
-  { type: 'placeholder', emoji: '⚖️👔', height: 200, gradient: 'linear-gradient(135deg,var(--yellow),var(--orange))', captionEs: 'El Abogado Más Loco', captionEn: 'The Craziest Lawyer', catEs: '⚖️ Comedia', catEn: '⚖️ Comedy', category: 'escena' },
-  { type: 'placeholder', emoji: '🧑‍✈️₿', height: 260, gradient: 'linear-gradient(135deg,var(--blue),var(--purple))', captionEs: 'El Capitán — TO THE MOON!', captionEn: 'The Captain — TO THE MOON!', catEs: '🚀 Dúo Dinámico', catEn: '🚀 Dynamic Duo', category: 'escena' },
-  { type: 'placeholder', emoji: '🧸🌎', height: 240, gradient: 'linear-gradient(135deg,var(--orange),var(--red))', captionEs: 'Colección de Muñecos del Mundo', captionEn: 'World Toy Collection', catEs: '🌍 Los Muñecos', catEn: '🌍 The Toys', category: 'munecos' },
-  { type: 'placeholder', emoji: '🎪🎊', height: 200, gradient: 'linear-gradient(135deg,var(--pink),var(--purple))', captionEs: 'El Gran Final — Confetti', captionEn: 'Grand Finale — Confetti', catEs: '🎪 Espectáculo', catEn: '🎪 Spectacle', category: 'escena' },
-  { type: 'placeholder', emoji: '🏳️‍🌈🤡', height: 280, gradient: 'linear-gradient(135deg,var(--red),var(--yellow))', captionEs: 'Orgullo y Diversión', captionEn: 'Pride and Fun', catEs: '🏳️‍🌈 Backstage', catEn: '🏳️‍🌈 Backstage', category: 'backstage' },
-  { type: 'placeholder', emoji: '🎤😂', height: 220, gradient: 'linear-gradient(135deg,var(--green),var(--yellow))', captionEs: 'Stand-Up con el Público', captionEn: 'Stand-Up with the Audience', catEs: '🎤 Interactivo', catEn: '🎤 Interactive', category: 'escena' },
-  { type: 'placeholder', emoji: '👨‍👩‍👧‍👦❤️', height: 250, gradient: 'linear-gradient(135deg,var(--dark),var(--purple))', captionEs: 'Con los Fans', captionEn: 'With the Fans', catEs: '❤️ Meet & Greet', catEn: '❤️ Meet & Greet', category: 'backstage' },
+  { src: heroClown, captionEs: 'Maquillaje Clásico', captionEn: 'Classic Makeup', catEs: '🎭 Maquillaje', catEn: '🎭 Makeup', category: 'backstage' },
+  { src: fullCostume, captionEs: 'Monterrey de Noche', captionEn: 'Monterrey at Night', catEs: '🌃 Monterrey', catEn: '🌃 Monterrey', category: 'backstage' },
+  { src: titereHand1, captionEs: 'El Títere Humano en Acción', captionEn: 'The Human Puppet in Action', catEs: '🎪 En Escena', catEn: '🎪 On Stage', category: 'escena' },
+  { src: titereHand2, captionEs: 'Sentado en la Mano Gigante', captionEn: 'Sitting on the Giant Hand', catEs: '🖐️ En Escena', catEn: '🖐️ On Stage', category: 'escena' },
+  { src: gorilaImg, captionEs: 'Con la Gorila', captionEn: 'With the Gorilla', catEs: '🦍 El Elenco', catEn: '🦍 The Cast', category: 'elenco' },
+  { src: abogadoImg, captionEs: 'El Abogado Payaso', captionEn: 'The Clown Lawyer', catEs: '⚖️ En Escena', catEn: '⚖️ On Stage', category: 'escena' },
+  { src: terrianImg, captionEs: 'Acto Terrian', captionEn: 'Terrian Act', catEs: '🐕 En Escena', catEn: '🐕 On Stage', category: 'escena' },
+  { src: partyBalloonDog, captionEs: 'Fiesta con Globos', captionEn: 'Balloon Party', catEs: '🎈 En Escena', catEn: '🎈 On Stage', category: 'escena' },
+  { src: balloonFlowers, captionEs: 'Show al Aire Libre', captionEn: 'Outdoor Show', catEs: '🌸 En Escena', catEn: '🌸 On Stage', category: 'escena' },
+  { src: balloonArt, captionEs: 'Arte con Globos', captionEn: 'Balloon Art', catEs: '🎨 En Escena', catEn: '🎨 On Stage', category: 'escena' },
+  { src: backstageRestaurant, captionEs: 'Detrás de Cámaras', captionEn: 'Behind the Scenes', catEs: '📷 Backstage', catEn: '📷 Backstage', category: 'backstage' },
+  { src: backstageBalloons, captionEs: 'Después del Show', captionEn: 'After the Show', catEs: '🎊 Backstage', catEn: '🎊 Backstage', category: 'backstage' },
+  { src: handPuppetConcept, captionEs: 'El Concepto: Títere de Mano', captionEn: 'The Concept: Hand Puppet', catEs: '🧸 Los Muñecos', catEn: '🧸 The Toys', category: 'munecos' },
+  { src: handPuppetToy, captionEs: 'El Muñeco Oficial', captionEn: 'The Official Puppet', catEs: '🧸 Los Muñecos', catEn: '🧸 The Toys', category: 'munecos' },
+  { src: duoParty, captionEs: 'Con su Pareja', captionEn: 'With his Partner', catEs: '❤️ El Elenco', catEn: '❤️ The Cast', category: 'elenco' },
+  { src: fanMeetgreet, captionEs: 'Con los Fans', captionEn: 'With the Fans', catEs: '❤️ Meet & Greet', catEn: '❤️ Meet & Greet', category: 'backstage' },
+  { src: bwPortrait, captionEs: 'Retrato Clásico', captionEn: 'Classic Portrait', catEs: '📷 Retrato', catEn: '📷 Portrait', category: 'elenco' },
+  { src: paletaArt, captionEs: 'Paleta Payaso — El Logo', captionEn: 'Paleta Payaso — The Logo', catEs: '🎨 Branding', catEn: '🎨 Branding', category: 'backstage' },
 ]
 
 const filters = [
@@ -55,12 +77,9 @@ export default function Galeria() {
 
         <div className="masonry">
           {filtered.map((photo, i) => (
-            <RevealOnScroll key={i}>
+            <RevealOnScroll key={`${filter}-${i}`}>
               <div className="masonry-item">
-                {photo.type === 'img'
-                  ? <img src={photo.src} alt={photo.captionEs} />
-                  : <div className="photo-placeholder" style={{ height: photo.height, background: photo.gradient }}>{photo.emoji}</div>
-                }
+                <img src={photo.src} alt={photo.captionEs} />
                 <div className="caption">
                   <T es={photo.captionEs} en={photo.captionEn} />
                   <br /><small><T es={photo.catEs} en={photo.catEn} /></small>

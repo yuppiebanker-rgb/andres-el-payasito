@@ -4,6 +4,16 @@ import { RevealOnScroll, Zigzag, SectionTitle, Btn } from '../components/UI'
 import { WA_LINKS, waShow } from '../utils/whatsapp'
 import headshot from '../assets/images/andres-headshot.png'
 import composite from '../assets/images/andres-composite.png'
+import heroImg from '../assets/images/hero-clown-makeup.png'
+import titereHand1 from '../assets/images/titere-humano-hand-1.png'
+import abogadoImg from '../assets/images/abogado-certificate.png'
+import gorilaImg from '../assets/images/con-la-gorila.png'
+import terrianImg from '../assets/images/terrian-companion.png'
+import handPuppetConcept from '../assets/images/hand-puppet-concept.png'
+import partyBalloonDog from '../assets/images/party-balloon-dog.png'
+import balloonFlowers from '../assets/images/balloon-flowers-outdoor.png'
+import duoParty from '../assets/images/duo-party.png'
+import fullCostume from '../assets/images/full-costume-skyline.png'
 
 const aboutCards = [
   { icon: '🖐️', titleEs: 'El Títere Humano', titleEn: 'The Human Puppet', descEs: '¡Le encanta que le digan "el títere de mano humano"! Andrés se sienta en su gigantesca mano y cobra vida como el muñeco más carismático del mundo. Ser payaso es su mayor pasión.', descEn: 'He loves being called "the human hand puppet"! Andrés sits on his giant hand and comes alive as the most charismatic puppet in the world. Being a clown is his greatest passion.', border: 'var(--yellow)' },
@@ -15,14 +25,14 @@ const aboutCards = [
 ]
 
 const acts = [
-  { emoji: '🖐️🤡', tagEs: '⭐ Acto Principal', tagEn: '⭐ Main Act', titleEs: 'El Títere Humano', titleEn: 'The Human Puppet', descEs: 'Andrés se convierte en un títere de mano sentado en su gigantesca mano. ¡Un espectáculo que desafía la realidad y explota las risas!', descEn: 'Andrés becomes a hand puppet sitting on his giant hand. A show that defies reality and explodes with laughs!', img: headshot, gradient: 'linear-gradient(135deg, var(--red), var(--pink))' },
-  { emoji: '⚖️👔', tagEs: 'Comedia', tagEn: 'Comedy', titleEs: 'El Abogado Payaso', titleEn: 'The Clown Lawyer', descEs: 'Vestido de traje y corbata, Andrés defiende los casos más absurdos del mundo. ¡Objeción, su señoría... por exceso de diversión!', descEn: 'Dressed in a suit and tie, Andrés defends the most absurd cases in the world. Objection, your honor... for excessive fun!', gradient: 'linear-gradient(135deg, var(--blue), var(--purple))' },
-  { emoji: '🦍💃', tagEs: 'Clásico', tagEn: 'Classic', titleEs: 'Baile con la Gorila', titleEn: 'Dance with the Gorilla', descEs: 'La gorila y Andrés compiten en un duelo de baile épico. ¿Quién tiene los mejores pasos? ¡El público decide!', descEn: 'The gorilla and Andrés compete in an epic dance battle. Who has the best moves? The audience decides!', gradient: 'linear-gradient(135deg, var(--green), var(--blue))' },
-  { emoji: '🐕🦴', tagEs: '¡Guau Guau!', tagEn: 'Woof Woof!', titleEs: 'El Perro Payaso', titleEn: 'The Clown Dog', descEs: '¡Andrés se disfraza de perro y actúa como uno! Ladra, persigue su cola, pide croquetas y hace trucos. El acto terrian que enloquece al público.', descEn: 'Andrés dresses up as a dog and acts like one! He barks, chases his tail, begs for treats, and does tricks. The terrian act that drives the audience crazy.', gradient: 'linear-gradient(135deg, var(--orange), var(--yellow))' },
-  { emoji: '🏴‍☠️📱', tagEs: 'Dúo Dinámico', tagEn: 'Dynamic Duo', titleEs: 'El Payasito y El Capitán', titleEn: 'The Clown & The Captain', descEs: 'Junto a "El Capitán", su compañero cripto-obsesionado, crean sketches sobre las aventuras del mundo moderno. ¡TO THE MOON! 🚀', descEn: 'With "The Captain," his crypto-obsessed partner, they create sketches about modern world adventures. TO THE MOON! 🚀', img: composite, gradient: 'linear-gradient(135deg, var(--purple), var(--pink))' },
-  { emoji: '🧸🌎', tagEs: 'Favorito del Público', tagEn: 'Audience Favorite', titleEs: 'Los Muñecos del Mundo', titleEn: 'Toys of the World', descEs: 'Andrés saca su colección de muñecos masculinos de todas las etnias y nacionalidades. Cada juguete tiene su propia personalidad y voz. ¡Una celebración de la diversidad!', descEn: 'Andrés brings out his collection of male toys from all ethnicities and nationalities. Each toy has its own personality and voice. A celebration of diversity!', gradient: 'linear-gradient(135deg, var(--red), var(--orange))' },
-  { emoji: '🎤😂', tagEs: 'Interactivo', tagEn: 'Interactive', titleEs: 'Stand-Up Payaso', titleEn: 'Clown Stand-Up', descEs: 'Andrés interactúa con el público en su segmento de comedia en vivo. ¡Nadie se salva de sus bromas!', descEn: 'Andrés interacts with the audience in his live comedy segment. Nobody escapes his jokes!', gradient: 'linear-gradient(135deg, var(--green), var(--purple))' },
-  { emoji: '🎪✨', tagEs: 'Espectáculo', tagEn: 'Spectacle', titleEs: 'El Gran Final', titleEn: 'The Grand Finale', descEs: 'Un cierre espectacular con confetti, música y la participación de todo el elenco. ¡Una fiesta inolvidable!', descEn: 'A spectacular finale with confetti, music, and the full cast. An unforgettable party!', gradient: 'linear-gradient(135deg, var(--blue), var(--green))' },
+  { emoji: '🖐️🤡', tagEs: '⭐ Acto Principal', tagEn: '⭐ Main Act', titleEs: 'El Títere Humano', titleEn: 'The Human Puppet', descEs: 'Andrés se convierte en un títere de mano sentado en su gigantesca mano. ¡Un espectáculo que desafía la realidad y explota las risas!', descEn: 'Andrés becomes a hand puppet sitting on his giant hand. A show that defies reality and explodes with laughs!', img: titereHand1, gradient: 'linear-gradient(135deg, var(--red), var(--pink))' },
+  { emoji: '⚖️👔', tagEs: 'Comedia', tagEn: 'Comedy', titleEs: 'El Abogado Payaso', titleEn: 'The Clown Lawyer', descEs: 'Vestido de traje y corbata, Andrés defiende los casos más absurdos del mundo. ¡Objeción, su señoría... por exceso de diversión!', descEn: 'Dressed in a suit and tie, Andrés defends the most absurd cases in the world. Objection, your honor... for excessive fun!', img: abogadoImg, gradient: 'linear-gradient(135deg, var(--blue), var(--purple))' },
+  { emoji: '🦍💃', tagEs: 'Clásico', tagEn: 'Classic', titleEs: 'Baile con la Gorila', titleEn: 'Dance with the Gorilla', descEs: 'La gorila y Andrés compiten en un duelo de baile épico. ¿Quién tiene los mejores pasos? ¡El público decide!', descEn: 'The gorilla and Andrés compete in an epic dance battle. Who has the best moves? The audience decides!', img: gorilaImg, gradient: 'linear-gradient(135deg, var(--green), var(--blue))' },
+  { emoji: '🐕🦴', tagEs: '¡Guau Guau!', tagEn: 'Woof Woof!', titleEs: 'El Perro Payaso', titleEn: 'The Clown Dog', descEs: '¡Andrés se disfraza de perro y actúa como uno! Ladra, persigue su cola, pide croquetas y hace trucos. El acto terrian que enloquece al público.', descEn: 'Andrés dresses up as a dog and acts like one! He barks, chases his tail, begs for treats, and does tricks. The terrian act that drives the audience crazy.', img: terrianImg, gradient: 'linear-gradient(135deg, var(--orange), var(--yellow))' },
+  { emoji: '🏴‍☠️📱', tagEs: 'Dúo Dinámico', tagEn: 'Dynamic Duo', titleEs: 'El Payasito y El Capitán', titleEn: 'The Clown & The Captain', descEs: 'Junto a "El Capitán", su compañero cripto-obsesionado, crean sketches sobre las aventuras del mundo moderno. ¡TO THE MOON! 🚀', descEn: 'With "The Captain," his crypto-obsessed partner, they create sketches about modern world adventures. TO THE MOON! 🚀', img: duoParty, gradient: 'linear-gradient(135deg, var(--purple), var(--pink))' },
+  { emoji: '🧸🌎', tagEs: 'Favorito del Público', tagEn: 'Audience Favorite', titleEs: 'Los Muñecos del Mundo', titleEn: 'Toys of the World', descEs: 'Andrés saca su colección de muñecos masculinos de todas las etnias y nacionalidades. Cada juguete tiene su propia personalidad y voz. ¡Una celebración de la diversidad!', descEn: 'Andrés brings out his collection of male toys from all ethnicities and nationalities. Each toy has its own personality and voice. A celebration of diversity!', img: handPuppetConcept, gradient: 'linear-gradient(135deg, var(--red), var(--orange))' },
+  { emoji: '🎤😂', tagEs: 'Interactivo', tagEn: 'Interactive', titleEs: 'Stand-Up Payaso', titleEn: 'Clown Stand-Up', descEs: 'Andrés interactúa con el público en su segmento de comedia en vivo. ¡Nadie se salva de sus bromas!', descEn: 'Andrés interacts with the audience in his live comedy segment. Nobody escapes his jokes!', img: partyBalloonDog, gradient: 'linear-gradient(135deg, var(--green), var(--purple))' },
+  { emoji: '🎪✨', tagEs: 'Espectáculo', tagEn: 'Spectacle', titleEs: 'El Gran Final', titleEn: 'The Grand Finale', descEs: 'Un cierre espectacular con confetti, música y la participación de todo el elenco. ¡Una fiesta inolvidable!', descEn: 'A spectacular finale with confetti, music, and the full cast. An unforgettable party!', img: balloonFlowers, gradient: 'linear-gradient(135deg, var(--blue), var(--green))' },
 ]
 
 const shows = [
@@ -33,9 +43,9 @@ const shows = [
 ]
 
 const cast = [
-  { emoji: '🤡', img: headshot, nameEs: 'Andrés el Payasito', nameEn: 'Andrés el Payasito', roleEs: '🏳️‍🌈 Estrella Principal — El Títere Humano', roleEn: '🏳️‍🌈 Lead Star — The Human Puppet', descEs: '¡El payaso títere de mano más querido del mundo! Abiertamente gay y orgullosamente payaso. Maestro del humor, coleccionista de muñecos y la alegría en persona.', descEn: 'The world\'s most beloved hand puppet clown! Openly gay and proudly a clown. Master of humor, toy collector, and joy personified.', bg: 'var(--red)' },
-  { emoji: '🦍', nameEs: 'La Gorila', nameEn: 'The Gorilla', roleEs: '🍌 Co-Estrella — La Compañera Inseparable', roleEn: '🍌 Co-Star — The Inseparable Companion', descEs: 'Salvaje, divertida y con más ritmo que nadie. La gorila hembra que roba el show en cada función.', descEn: 'Wild, funny, and with more rhythm than anyone. The female gorilla who steals the show every performance.', bg: 'var(--purple)' },
-  { emoji: '🧑‍✈️', nameEs: 'El Capitán', nameEn: 'The Captain', roleEs: '₿ Compañero — El Cripto-Aventurero', roleEn: '₿ Partner — The Crypto-Adventurer', descEs: 'Siempre hablando de Bitcoin y blockchain, El Capitán trae el humor tech al escenario. ¡HODL the laughs!', descEn: 'Always talking Bitcoin and blockchain, The Captain brings tech humor to the stage. HODL the laughs!', bg: 'var(--blue)' },
+  { emoji: '🤡', img: fullCostume, nameEs: 'Andrés el Payasito', nameEn: 'Andrés el Payasito', roleEs: '🏳️‍🌈 Estrella Principal — El Títere Humano', roleEn: '🏳️‍🌈 Lead Star — The Human Puppet', descEs: '¡El payaso títere de mano más querido del mundo! Abiertamente gay y orgullosamente payaso. Maestro del humor, coleccionista de muñecos y la alegría en persona.', descEn: 'The world\'s most beloved hand puppet clown! Openly gay and proudly a clown. Master of humor, toy collector, and joy personified.', bg: 'var(--red)' },
+  { emoji: '🦍', img: gorilaImg, nameEs: 'La Gorila', nameEn: 'The Gorilla', roleEs: '🍌 Co-Estrella — La Compañera Inseparable', roleEn: '🍌 Co-Star — The Inseparable Companion', descEs: 'Salvaje, divertida y con más ritmo que nadie. La gorila hembra que roba el show en cada función.', descEn: 'Wild, funny, and with more rhythm than anyone. The female gorilla who steals the show every performance.', bg: 'var(--purple)' },
+  { emoji: '🧑‍✈️', img: duoParty, nameEs: 'El Capitán', nameEn: 'The Captain', roleEs: '₿ Compañero — El Cripto-Aventurero', roleEn: '₿ Partner — The Crypto-Adventurer', descEs: 'Siempre hablando de Bitcoin y blockchain, El Capitán trae el humor tech al escenario. ¡HODL the laughs!', descEn: 'Always talking Bitcoin and blockchain, The Captain brings tech humor to the stage. HODL the laughs!', bg: 'var(--blue)' },
 ]
 
 export default function Home() {
@@ -51,7 +61,7 @@ export default function Home() {
       {/* HERO */}
       <section className="hero">
         <div className="hero-content">
-          <div className="hero-image-placeholder">🤡</div>
+          <div className="hero-image-placeholder"><img src={heroImg} alt="Andrés el Payasito" /></div>
           <div className="hero-badge">🏳️‍🌈 <T es="Payaso de Clase Mundial" en="World Class Clown" /> 🏳️‍🌈</div>
           <h1>Andrés<br/>El Payasito</h1>
           <h2>— El Paleta Payaso — El Títere Humano —</h2>

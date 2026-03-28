@@ -1,11 +1,13 @@
 import { T } from '../components/LangContext'
 import { PageHero, RevealOnScroll, Zigzag, SectionTitle, Btn } from '../components/UI'
 import { WA_LINKS } from '../utils/whatsapp'
+import bwPortrait from '../assets/images/bw-clown-portrait.png'
+import paletaArt from '../assets/images/paleta-payaso-art.png'
 
 const downloads = [
-  { icon: '📸', titleEs: 'Fotos Oficiales', titleEn: 'Official Photos', descEs: 'Alta resolución, uso editorial', descEn: 'High res, editorial use' },
+  { icon: '📸', titleEs: 'Fotos Oficiales', titleEn: 'Official Photos', descEs: 'Alta resolución, uso editorial', descEn: 'High res, editorial use', img: bwPortrait },
   { icon: '📝', titleEs: 'Biografía Oficial', titleEn: 'Official Bio', descEs: 'Corta y larga, ES/EN', descEn: 'Short & long, ES/EN' },
-  { icon: '🎨', titleEs: 'Logotipos', titleEn: 'Logos', descEs: 'PNG, SVG, colores oficiales', descEn: 'PNG, SVG, official colors' },
+  { icon: '🎨', titleEs: 'Logotipos', titleEn: 'Logos', descEs: 'PNG, SVG, colores oficiales', descEn: 'PNG, SVG, official colors', img: paletaArt },
   { icon: '🎬', titleEs: 'Videos Promocionales', titleEn: 'Promo Videos', descEs: 'Clips del show, entrevistas', descEn: 'Show clips, interviews' },
 ]
 
@@ -55,7 +57,9 @@ export default function Prensa() {
           <div className="download-grid">
             {downloads.map((dl, i) => (
               <div key={i} className="download-card">
-                <div className="dl-icon">{dl.icon}</div>
+                {dl.img
+                  ? <img src={dl.img} alt={dl.titleEs} style={{ width: '100%', height: 120, objectFit: 'cover', borderRadius: 8, marginBottom: 10 }} />
+                  : <div className="dl-icon">{dl.icon}</div>}
                 <h4><T es={dl.titleEs} en={dl.titleEn} /></h4>
                 <p><T es={dl.descEs} en={dl.descEn} /></p>
               </div>

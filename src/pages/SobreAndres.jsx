@@ -2,7 +2,7 @@
 import { T } from '../components/LangContext'
 import { PageHero, RevealOnScroll, Zigzag, SectionTitle, Btn } from '../components/UI'
 import { WA_LINKS } from '../utils/whatsapp'
-import headshot from '../assets/images/andres-headshot.png'
+import fullCostume from '../assets/images/full-costume-skyline.png'
 
 export default function SobreAndres() {
   return (
@@ -16,7 +16,7 @@ export default function SobreAndres() {
         <div className="bio-layout">
           <div className="bio-photo">
             <div className="bio-avatar">
-              <img src={headshot} alt="Andrés el Payasito" />
+              <img src={fullCostume} alt="Andrés el Payasito" />
             </div>
             <span className="pride-badge">🏳️‍🌈 <T es="Orgullosamente Gay" en="Proudly Gay" /></span>
           </div>

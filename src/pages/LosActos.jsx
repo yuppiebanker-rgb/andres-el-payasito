@@ -2,12 +2,18 @@ import { Link } from 'react-router-dom'
 import { T } from '../components/LangContext'
 import { PageHero, RevealOnScroll, Zigzag, SectionTitle, Btn } from '../components/UI'
 import { WA_LINKS } from '../utils/whatsapp'
-import headshot from '../assets/images/andres-headshot.png'
-import composite from '../assets/images/andres-composite.png'
+import titereHand1 from '../assets/images/titere-humano-hand-1.png'
+import abogadoImg from '../assets/images/abogado-certificate.png'
+import gorilaImg from '../assets/images/con-la-gorila.png'
+import terrianImg from '../assets/images/terrian-companion.png'
+import handPuppetConcept from '../assets/images/hand-puppet-concept.png'
+import partyBalloonDog from '../assets/images/party-balloon-dog.png'
+import balloonFlowers from '../assets/images/balloon-flowers-outdoor.png'
+import duoParty from '../assets/images/duo-party.png'
 
 const acts = [
   {
-    emoji: '🖐️🤡', img: headshot,
+    emoji: '🖐️🤡', img: titereHand1,
     tagEs: '⭐ Acto Principal', tagEn: '⭐ Main Act',
     titleEs: 'El Títere Humano', titleEn: 'The Human Puppet',
     durationEs: '25 minutos', durationEn: '25 minutes',
@@ -21,7 +27,7 @@ const acts = [
     gradient: 'linear-gradient(135deg, var(--red), var(--pink))',
   },
   {
-    emoji: '⚖️👔',
+    emoji: '⚖️👔', img: abogadoImg,
     tagEs: 'Comedia', tagEn: 'Comedy',
     titleEs: 'El Abogado Payaso', titleEn: 'The Clown Lawyer',
     durationEs: '20 minutos', durationEn: '20 minutes',
@@ -35,7 +41,7 @@ const acts = [
     gradient: 'linear-gradient(135deg, var(--blue), var(--purple))',
   },
   {
-    emoji: '🦍💃',
+    emoji: '🦍💃', img: gorilaImg,
     tagEs: 'Clásico', tagEn: 'Classic',
     titleEs: 'Baile con la Gorila', titleEn: 'Dance with the Gorilla',
     durationEs: '15 minutos', durationEn: '15 minutes',
@@ -49,7 +55,7 @@ const acts = [
     gradient: 'linear-gradient(135deg, var(--green), var(--blue))',
   },
   {
-    emoji: '🐕🦴',
+    emoji: '🐕🦴', img: terrianImg,
     tagEs: '¡Guau!', tagEn: 'Woof!',
     titleEs: 'El Perro Payaso — Acto Terrian', titleEn: 'The Clown Dog — Terrian Act',
     durationEs: '15 minutos', durationEn: '15 minutes',
@@ -63,7 +69,7 @@ const acts = [
     gradient: 'linear-gradient(135deg, var(--orange), var(--yellow))',
   },
   {
-    emoji: '🏴‍☠️📱', img: composite,
+    emoji: '🏴‍☠️📱', img: duoParty,
     tagEs: 'Dúo Dinámico', tagEn: 'Dynamic Duo',
     titleEs: 'El Payasito y El Capitán', titleEn: 'The Clown & The Captain',
     durationEs: '20 minutos', durationEn: '20 minutes',
@@ -77,7 +83,7 @@ const acts = [
     gradient: 'linear-gradient(135deg, var(--purple), var(--pink))',
   },
   {
-    emoji: '🧸🌎',
+    emoji: '🧸🌎', img: handPuppetConcept,
     tagEs: 'Favorito del Público', tagEn: 'Audience Favorite',
     titleEs: 'Los Muñecos del Mundo', titleEn: 'Toys of the World',
     durationEs: '20 minutos', durationEn: '20 minutes',
@@ -91,7 +97,7 @@ const acts = [
     gradient: 'linear-gradient(135deg, var(--red), var(--orange))',
   },
   {
-    emoji: '🎤😂',
+    emoji: '🎤😂', img: partyBalloonDog,
     tagEs: 'Interactivo', tagEn: 'Interactive',
     titleEs: 'Stand-Up Payaso', titleEn: 'Clown Stand-Up',
     durationEs: '15 minutos', durationEn: '15 minutes',
@@ -105,7 +111,7 @@ const acts = [
     gradient: 'linear-gradient(135deg, var(--green), var(--purple))',
   },
   {
-    emoji: '🎪✨',
+    emoji: '🎪✨', img: balloonFlowers,
     tagEs: 'Espectáculo', tagEn: 'Spectacle',
     titleEs: 'El Gran Final', titleEn: 'The Grand Finale',
     durationEs: '15 minutos', durationEn: '15 minutes',
