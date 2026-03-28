@@ -1,6 +1,6 @@
 import { T } from '../components/LangContext'
 import { PageHero, RevealOnScroll, Zigzag, SectionTitle, Btn } from '../components/UI'
-import { WA_LINKS } from '../utils/whatsapp'
+import { WA_LINKS, igDm, igProfile } from '../utils/contact'
 import bwPortrait from '../assets/images/bw-clown-portrait.png'
 import paletaArt from '../assets/images/paleta-payaso-art.png'
 
@@ -160,11 +160,19 @@ export default function Prensa() {
             <p style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--red)', marginBottom: 8 }}>
               📧 prensa@andreselpayasito.com
             </p>
-            <p style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--green)', marginBottom: 25 }}>
+            <p style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--green)', marginBottom: 8 }}>
               📱 +52 81 1531 7934
             </p>
-            <Btn href={WA_LINKS.prensa} color="green" target="_blank">
-              📱 <T es="Contactar por WhatsApp" en="Contact via WhatsApp" />
+            <p style={{ fontSize: '1.2rem', fontWeight: 700, margin: '8px 0 25px' }}>
+              <a href={igProfile} target="_blank" rel="noopener noreferrer" style={{ color: '#833AB4', textDecoration: 'none' }}>
+                📸 @andreszepedaz01
+              </a>
+            </p>
+            <Btn href={WA_LINKS.prensa} color="green" target="_blank" style={{ marginRight: 10 }}>
+              📱 WhatsApp
+            </Btn>
+            <Btn href={igDm} color="pink" target="_blank">
+              📸 Instagram DM
             </Btn>
           </div>
         </RevealOnScroll>

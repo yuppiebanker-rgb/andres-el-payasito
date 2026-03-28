@@ -1,7 +1,13 @@
-const PHONE = '528115317934'
+const WA_PHONE = '528115317934'
+const IG_USER = 'andreszepedaz01'
 
+// WhatsApp links
 export const wa = (message) =>
-  `https://wa.me/${PHONE}?text=${encodeURIComponent(message)}`
+  `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(message)}`
+
+// Instagram DM link
+export const igDm = `https://ig.me/m/${IG_USER}`
+export const igProfile = `https://instagram.com/${IG_USER}`
 
 export const WA_LINKS = {
   general: wa('¡Hola! Quiero info sobre Andrés el Payasito 🤡'),

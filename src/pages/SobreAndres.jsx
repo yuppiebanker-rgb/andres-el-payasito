@@ -1,7 +1,7 @@
 // SobreAndres.jsx - About page
 import { T } from '../components/LangContext'
 import { PageHero, RevealOnScroll, Zigzag, SectionTitle, Btn } from '../components/UI'
-import { WA_LINKS } from '../utils/whatsapp'
+import { WA_LINKS } from '../utils/contact'
 import fullCostume from '../assets/images/full-costume-skyline.png'
 
 export default function SobreAndres() {

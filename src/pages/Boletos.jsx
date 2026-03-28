@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { T } from '../components/LangContext'
 import { PageHero, RevealOnScroll, Btn } from '../components/UI'
-import { WA_LINKS, waShow } from '../utils/whatsapp'
+import { WA_LINKS, waShow, igDm } from '../utils/contact'
 
 const shows = [
   {
@@ -112,6 +112,9 @@ export default function Boletos() {
                 <Btn href={waShow(show.name || show.nameEs)} color="red" target="_blank" style={{ fontSize: '0.9rem', padding: '10px 25px' }}>
                   🎟️ <T es="Reservar" en="Book" />
                 </Btn>
+                <a href={igDm} target="_blank" rel="noopener noreferrer" className="btn pink" style={{ fontSize: '0.9rem', padding: '10px 20px', marginTop: 8 }}>
+                  📸 DM
+                </a>
               </div>
             </div>
           </RevealOnScroll>

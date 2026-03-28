@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { T } from '../components/LangContext'
 import { PageHero, RevealOnScroll, Zigzag, SectionTitle, Btn } from '../components/UI'
-import { WA_LINKS } from '../utils/whatsapp'
+import { WA_LINKS } from '../utils/contact'
 import titereHand1 from '../assets/images/titere-humano-hand-1.png'
 import abogadoImg from '../assets/images/abogado-certificate.png'
 import gorilaImg from '../assets/images/con-la-gorila.png'

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { T } from '../components/LangContext'
 import { RevealOnScroll, Zigzag, SectionTitle, Btn } from '../components/UI'
-import { WA_LINKS, waShow } from '../utils/whatsapp'
+import { WA_LINKS, waShow, igDm } from '../utils/contact'
 import HeroCarousel from '../components/HeroCarousel'
 import headshot from '../assets/images/andres-headshot.png'
 import composite from '../assets/images/andres-composite.png'
@@ -66,8 +66,9 @@ export default function Home() {
           <h1>Andrés<br/>El Payasito</h1>
           <h2>— El Paleta Payaso — El Títere Humano —</h2>
           <p><T es="¡El payaso títere de mano más divertido del mundo! Orgullosamente gay, orgullosamente payaso. Risas, diversidad y momentos inolvidables para todos." en="The world's funniest hand puppet clown! Proudly gay, proudly a clown. Laughs, diversity, and unforgettable moments for everyone." /></p>
-          <Link to="/boletos" className="btn red" style={{ marginRight: 15 }}>🎟️ <T es="Ver Próximos Shows" en="See Upcoming Shows" /></Link>
-          <a href={WA_LINKS.boletos} target="_blank" rel="noopener noreferrer" className="btn green">📱 <T es="Reservar por WhatsApp" en="Book via WhatsApp" /></a>
+          <Link to="/boletos" className="btn red" style={{ marginRight: 10 }}>🎟️ <T es="Ver Shows" en="See Shows" /></Link>
+          <a href={WA_LINKS.boletos} target="_blank" rel="noopener noreferrer" className="btn green" style={{ marginRight: 10 }}>📱 WhatsApp</a>
+          <a href={igDm} target="_blank" rel="noopener noreferrer" className="btn pink">📸 Instagram</a>
         </div>
       </section>
 

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { T } from '../components/LangContext'
 import { PageHero, RevealOnScroll, Btn } from '../components/UI'
-import { WA_LINKS } from '../utils/whatsapp'
+import { WA_LINKS } from '../utils/contact'
 import fullCostume from '../assets/images/full-costume-skyline.png'
 import gorilaImg from '../assets/images/con-la-gorila.png'
 import duoParty from '../assets/images/duo-party.png'

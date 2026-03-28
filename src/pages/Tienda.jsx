@@ -1,6 +1,6 @@
 import { T } from '../components/LangContext'
 import { PageHero, RevealOnScroll, Btn } from '../components/UI'
-import { waProduct } from '../utils/whatsapp'
+import { waProduct, igDm } from '../utils/contact'
 import handPuppetToy from '../assets/images/hand-puppet-toy.png'
 import paletaArt from '../assets/images/paleta-payaso-art.png'
 
@@ -88,6 +88,9 @@ export default function Tienda() {
                   <Btn href={waProduct(product.nameEs)} color="red" target="_blank" style={{ width: '100%', textAlign: 'center', fontSize: '0.85rem', padding: '10px 20px' }}>
                     📱 <T es="Comprar" en="Buy" />
                   </Btn>
+                  <a href={igDm} target="_blank" rel="noopener noreferrer" className="btn pink" style={{ width: '100%', textAlign: 'center', marginTop: 8, fontSize: '0.85rem', padding: '8px 20px' }}>
+                    📸 DM
+                  </a>
                 </div>
               </div>
             </RevealOnScroll>

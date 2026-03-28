@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { T } from '../components/LangContext'
 import { PageHero, RevealOnScroll, Zigzag, SectionTitle, Btn } from '../components/UI'
-import { WA_LINKS, waEvent } from '../utils/whatsapp'
+import { WA_LINKS, waEvent, igDm } from '../utils/contact'
 
 const packages = [
   {
@@ -102,6 +102,9 @@ export default function EventosPrivados() {
                 <Btn href={`https://wa.me/528115317934?text=${encodeURIComponent(pkg.waMsg)}`} color="red" target="_blank" style={{ width: '100%', textAlign: 'center' }}>
                   📱 <T es="Cotizar" en="Get Quote" />
                 </Btn>
+                <a href={igDm} target="_blank" rel="noopener noreferrer" className="btn pink" style={{ width: '100%', textAlign: 'center', marginTop: 10 }}>
+                  📸 <T es="DM en Instagram" en="Instagram DM" />
+                </a>
               </div>
             </RevealOnScroll>
           ))}

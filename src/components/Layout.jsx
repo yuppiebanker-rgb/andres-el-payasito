@@ -1,6 +1,6 @@
 import { Outlet, Link, useLocation } from 'react-router-dom'
 import { useLang } from './LangContext'
-import { WA_LINKS } from '../utils/whatsapp'
+import { WA_LINKS, igDm, igProfile } from '../utils/contact'
 import { useEffect } from 'react'
 
 const navItems = [
@@ -51,6 +51,12 @@ export default function Layout() {
         <Outlet />
       </main>
 
+      {/* Floating Instagram DM */}
+      <a href={igDm} target="_blank" rel="noopener noreferrer" className="instagram-float" aria-label="Instagram DM">
+        📸
+        <span className="tooltip">Instagram DM!</span>
+      </a>
+
       {/* Floating WhatsApp */}
       <a href={WA_LINKS.general} target="_blank" rel="noopener noreferrer" className="whatsapp-float">
         💬
@@ -62,6 +68,10 @@ export default function Layout() {
           {navItems.map(item => (
             <Link key={item.path} to={item.path}>{t(`nav.${item.key}`)}</Link>
           ))}
+        </div>
+        <div className="footer-social" style={{ display: 'flex', justifyContent: 'center', gap: 15, marginTop: 15 }}>
+          <a href={igProfile} target="_blank" rel="noopener noreferrer" style={{ fontSize: '1.5rem', textDecoration: 'none' }} aria-label="Instagram">📸</a>
+          <a href={WA_LINKS.general} target="_blank" rel="noopener noreferrer" style={{ fontSize: '1.5rem', textDecoration: 'none' }} aria-label="WhatsApp">💬</a>
         </div>
         <p className="copyright">
           © 2026 <span>Andrés el Payasito</span> — El Títere Humano 🤡 | 🏳️‍🌈
