@@ -8,7 +8,7 @@ import duoParty from '../assets/images/duo-party.png'
 
 const cast = [
   {
-    img: fullCostume,
+    img: fullCostume, imgPosition: 'center 15%',
     name: 'Andrés el Payasito',
     roleEs: '🏳️‍🌈 Estrella Principal — El Títere Humano',
     roleEn: '🏳️‍🌈 Lead Star — The Human Puppet',
@@ -30,7 +30,7 @@ const cast = [
     gradient: 'linear-gradient(135deg, var(--red), var(--pink))',
   },
   {
-    img: gorilaImg,
+    img: gorilaImg, imgPosition: 'center 25%',
     name: 'La Gorila',
     roleEs: '🍌 Co-Estrella — La Compañera Inseparable',
     roleEn: '🍌 Co-Star — The Inseparable Companion',
@@ -50,7 +50,7 @@ const cast = [
     gradient: 'linear-gradient(135deg, var(--purple), var(--blue))',
   },
   {
-    img: duoParty,
+    img: duoParty, imgPosition: 'center 20%',
     name: 'El Capitán',
     roleEs: '₿ Compañero — El Cripto-Aventurero',
     roleEn: '₿ Partner — The Crypto-Adventurer',
@@ -84,7 +84,7 @@ export default function ElElenco() {
           <RevealOnScroll key={i}>
             <div className="cast-hero-card">
               <div className="cast-photo" style={{ background: member.gradient }}>
-                {member.img ? <img src={member.img} alt={member.name} /> : member.emoji}
+                {member.img ? <img src={member.img} alt={member.name} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: member.imgPosition || 'center 20%' }} /> : member.emoji}
               </div>
               <div className="cast-bio">
                 <h2>{member.name}</h2>

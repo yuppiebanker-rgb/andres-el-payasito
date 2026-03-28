@@ -1088,12 +1088,11 @@ footer .copyright span {
     box-shadow: 5px 5px 0 var(--dark);
     border-width: 3px;
   }
-  .act-image { height: 200px; }
+  .act-image { height: 250px; }
   .act-image img {
     width: 100%;
-    height: 200px;
+    height: 250px;
     object-fit: cover;
-    object-position: center top;
   }
   .act-body { padding: 18px; }
   .act-body h3 { font-size: 1.2rem; }
@@ -1107,11 +1106,10 @@ footer .copyright span {
     box-shadow: 5px 5px 0 var(--dark);
     border-width: 3px;
   }
-  .card-image { height: 180px; }
+  .card-image { height: 220px; }
   .card-image img {
-    height: 180px;
+    height: 220px;
     object-fit: cover;
-    object-position: center top;
   }
 
   /* --- Cast Section (Home) --- */
@@ -1176,14 +1174,13 @@ footer .copyright span {
   }
   .act-detail > * { direction: ltr !important; }
   .act-visual {
-    min-height: 200px;
+    min-height: 250px;
     font-size: 4rem;
   }
   .act-visual img {
     width: 100%;
-    height: 200px;
+    min-height: 250px;
     object-fit: cover;
-    object-position: center top;
   }
   .act-info { padding: 25px 20px; }
   .act-info h2 { font-size: 1.3rem; }
@@ -1463,10 +1460,6 @@ footer .copyright span {
   .bio-avatar img {
     object-position: center 10% !important;
   }
-  .cast-photo img,
-  .cast-hero-card .cast-photo img {
-    object-position: center 15% !important;
-  }
   .cast-hero-card .cast-photo {
     min-height: 200px;
     max-height: 250px;
@@ -1474,11 +1467,6 @@ footer .copyright span {
   .cast-hero-card .cast-photo img {
     height: 100%;
     max-height: 250px;
-    object-position: center 10% !important;
-  }
-  .act-image img,
-  .act-visual img {
-    object-position: center 15% !important;
   }
 }
 
@@ -1601,33 +1589,18 @@ footer .copyright span {
 /* Must be at the BOTTOM of the stylesheet       */
 /* ============================================= */
 
-/* ALL circular/avatar images — aggressively show the top of the image (face area) */
+/* Circular/avatar images — always show face (keep !important for circles) */
 .hero-carousel-circle img,
-.hero-image-placeholder img,
-.cast-avatar img,
-.bio-avatar img,
-.cast-photo img,
-.cast-hero-card .cast-photo img {
+.hero-image-placeholder img {
   object-fit: cover !important;
   object-position: center 15% !important;
 }
 
-/* Act card images — slightly lower since some are full-body */
-.act-image img,
-.act-visual img {
+.cast-avatar img,
+.bio-avatar img {
   object-fit: cover !important;
-  object-position: center 20% !important;
+  object-position: center 15% !important;
 }
 
-/* Gallery images */
-.gallery-masonry .gallery-item img,
-.masonry-item img {
-  object-fit: cover !important;
-  object-position: center 20% !important;
-}
-
-/* Product images — centered since they vary (toys, art, etc.) */
-.product-image img {
-  object-fit: cover !important;
-  object-position: center center !important;
-}
+/* Act/gallery/product images — NO !important, inline styles control per-image position */
+/* These are fallbacks only; inline objectPosition on each <img> takes precedence */

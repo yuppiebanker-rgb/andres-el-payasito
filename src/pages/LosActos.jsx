@@ -13,7 +13,7 @@ import duoParty from '../assets/images/duo-party.png'
 
 const acts = [
   {
-    emoji: '🖐️🤡', img: titereHand1,
+    emoji: '🖐️🤡', img: titereHand1, imgPosition: 'center 30%',
     tagEs: '⭐ Acto Principal', tagEn: '⭐ Main Act',
     titleEs: 'El Títere Humano', titleEn: 'The Human Puppet',
     durationEs: '25 minutos', durationEn: '25 minutes',
@@ -27,7 +27,7 @@ const acts = [
     gradient: 'linear-gradient(135deg, var(--red), var(--pink))',
   },
   {
-    emoji: '⚖️👔', img: abogadoImg,
+    emoji: '⚖️👔', img: abogadoImg, imgPosition: 'center 15%',
     tagEs: 'Comedia', tagEn: 'Comedy',
     titleEs: 'El Abogado Payaso', titleEn: 'The Clown Lawyer',
     durationEs: '20 minutos', durationEn: '20 minutes',
@@ -41,7 +41,7 @@ const acts = [
     gradient: 'linear-gradient(135deg, var(--blue), var(--purple))',
   },
   {
-    emoji: '🦍💃', img: gorilaImg,
+    emoji: '🦍💃', img: gorilaImg, imgPosition: 'center 25%',
     tagEs: 'Clásico', tagEn: 'Classic',
     titleEs: 'Baile con la Gorila', titleEn: 'Dance with the Gorilla',
     durationEs: '15 minutos', durationEn: '15 minutes',
@@ -55,7 +55,7 @@ const acts = [
     gradient: 'linear-gradient(135deg, var(--green), var(--blue))',
   },
   {
-    emoji: '🐕🦴', img: terrianImg,
+    emoji: '🐕🦴', img: terrianImg, imgPosition: 'center 20%',
     tagEs: '¡Guau!', tagEn: 'Woof!',
     titleEs: 'El Perro Payaso — Acto Terrian', titleEn: 'The Clown Dog — Terrian Act',
     durationEs: '15 minutos', durationEn: '15 minutes',
@@ -69,7 +69,7 @@ const acts = [
     gradient: 'linear-gradient(135deg, var(--orange), var(--yellow))',
   },
   {
-    emoji: '🏴‍☠️📱', img: duoParty,
+    emoji: '🏴‍☠️📱', img: duoParty, imgPosition: 'center 20%',
     tagEs: 'Dúo Dinámico', tagEn: 'Dynamic Duo',
     titleEs: 'El Payasito y El Capitán', titleEn: 'The Clown & The Captain',
     durationEs: '20 minutos', durationEn: '20 minutes',
@@ -83,7 +83,7 @@ const acts = [
     gradient: 'linear-gradient(135deg, var(--purple), var(--pink))',
   },
   {
-    emoji: '🧸🌎', img: handPuppetConcept,
+    emoji: '🧸🌎', img: handPuppetConcept, imgPosition: 'center 15%',
     tagEs: 'Favorito del Público', tagEn: 'Audience Favorite',
     titleEs: 'Los Muñecos del Mundo', titleEn: 'Toys of the World',
     durationEs: '20 minutos', durationEn: '20 minutes',
@@ -97,7 +97,7 @@ const acts = [
     gradient: 'linear-gradient(135deg, var(--red), var(--orange))',
   },
   {
-    emoji: '🎤😂', img: partyBalloonDog,
+    emoji: '🎤😂', img: partyBalloonDog, imgPosition: 'center 20%',
     tagEs: 'Interactivo', tagEn: 'Interactive',
     titleEs: 'Stand-Up Payaso', titleEn: 'Clown Stand-Up',
     durationEs: '15 minutos', durationEn: '15 minutes',
@@ -111,7 +111,7 @@ const acts = [
     gradient: 'linear-gradient(135deg, var(--green), var(--purple))',
   },
   {
-    emoji: '🎪✨', img: balloonFlowers,
+    emoji: '🎪✨', img: balloonFlowers, imgPosition: 'center 15%',
     tagEs: 'Espectáculo', tagEn: 'Spectacle',
     titleEs: 'El Gran Final', titleEn: 'The Grand Finale',
     durationEs: '15 minutos', durationEn: '15 minutes',
@@ -140,7 +140,7 @@ export default function LosActos() {
             <div className="act-detail" style={i % 2 === 1 ? { direction: 'rtl' } : {}}>
               <div className="act-visual" style={{ background: act.gradient }}>
                 {act.img
-                  ? <img src={act.img} alt={act.titleEs} style={i % 2 === 1 ? { direction: 'ltr' } : {}} />
+                  ? <img src={act.img} alt={act.titleEs} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: act.imgPosition || 'center 20%', ...(i % 2 === 1 ? { direction: 'ltr' } : {}) }} />
                   : <span style={i % 2 === 1 ? { direction: 'ltr' } : {}}>{act.emoji}</span>}
               </div>
               <div className="act-info" style={i % 2 === 1 ? { direction: 'ltr' } : {}}>

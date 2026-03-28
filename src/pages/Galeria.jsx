@@ -21,24 +21,24 @@ import bwPortrait from '../assets/images/bw-clown-portrait.png'
 import paletaArt from '../assets/images/paleta-payaso-art.png'
 
 const photos = [
-  { src: heroClown, captionEs: 'Maquillaje Clásico', captionEn: 'Classic Makeup', catEs: '🎭 Maquillaje', catEn: '🎭 Makeup', category: 'backstage' },
-  { src: fullCostume, captionEs: 'Monterrey de Noche', captionEn: 'Monterrey at Night', catEs: '🌃 Monterrey', catEn: '🌃 Monterrey', category: 'backstage' },
-  { src: titereHand1, captionEs: 'El Títere Humano en Acción', captionEn: 'The Human Puppet in Action', catEs: '🎪 En Escena', catEn: '🎪 On Stage', category: 'escena' },
-  { src: titereHand2, captionEs: 'Sentado en la Mano Gigante', captionEn: 'Sitting on the Giant Hand', catEs: '🖐️ En Escena', catEn: '🖐️ On Stage', category: 'escena' },
-  { src: gorilaImg, captionEs: 'Con la Gorila', captionEn: 'With the Gorilla', catEs: '🦍 El Elenco', catEn: '🦍 The Cast', category: 'elenco' },
-  { src: abogadoImg, captionEs: 'El Abogado Payaso', captionEn: 'The Clown Lawyer', catEs: '⚖️ En Escena', catEn: '⚖️ On Stage', category: 'escena' },
-  { src: terrianImg, captionEs: 'Acto Terrian', captionEn: 'Terrian Act', catEs: '🐕 En Escena', catEn: '🐕 On Stage', category: 'escena' },
-  { src: partyBalloonDog, captionEs: 'Fiesta con Globos', captionEn: 'Balloon Party', catEs: '🎈 En Escena', catEn: '🎈 On Stage', category: 'escena' },
-  { src: balloonFlowers, captionEs: 'Show al Aire Libre', captionEn: 'Outdoor Show', catEs: '🌸 En Escena', catEn: '🌸 On Stage', category: 'escena' },
-  { src: balloonArt, captionEs: 'Arte con Globos', captionEn: 'Balloon Art', catEs: '🎨 En Escena', catEn: '🎨 On Stage', category: 'escena' },
-  { src: backstageRestaurant, captionEs: 'Detrás de Cámaras', captionEn: 'Behind the Scenes', catEs: '📷 Backstage', catEn: '📷 Backstage', category: 'backstage' },
-  { src: backstageBalloons, captionEs: 'Después del Show', captionEn: 'After the Show', catEs: '🎊 Backstage', catEn: '🎊 Backstage', category: 'backstage' },
-  { src: handPuppetConcept, captionEs: 'El Concepto: Títere de Mano', captionEn: 'The Concept: Hand Puppet', catEs: '🧸 Los Muñecos', catEn: '🧸 The Toys', category: 'munecos' },
-  { src: handPuppetToy, captionEs: 'El Muñeco Oficial', captionEn: 'The Official Puppet', catEs: '🧸 Los Muñecos', catEn: '🧸 The Toys', category: 'munecos' },
-  { src: duoParty, captionEs: 'Con su Pareja', captionEn: 'With his Partner', catEs: '❤️ El Elenco', catEn: '❤️ The Cast', category: 'elenco' },
-  { src: fanMeetgreet, captionEs: 'Con los Fans', captionEn: 'With the Fans', catEs: '❤️ Meet & Greet', catEn: '❤️ Meet & Greet', category: 'backstage' },
-  { src: bwPortrait, captionEs: 'Retrato Clásico', captionEn: 'Classic Portrait', catEs: '📷 Retrato', catEn: '📷 Portrait', category: 'elenco' },
-  { src: paletaArt, captionEs: 'Paleta Payaso — El Logo', captionEn: 'Paleta Payaso — The Logo', catEs: '🎨 Branding', catEn: '🎨 Branding', category: 'backstage' },
+  { src: heroClown, position: 'center 20%', captionEs: 'Maquillaje Clásico', captionEn: 'Classic Makeup', catEs: '🎭 Maquillaje', catEn: '🎭 Makeup', category: 'backstage' },
+  { src: fullCostume, position: 'center 15%', captionEs: 'Monterrey de Noche', captionEn: 'Monterrey at Night', catEs: '🌃 Monterrey', catEn: '🌃 Monterrey', category: 'backstage' },
+  { src: titereHand1, position: 'center center', captionEs: 'El Títere Humano en Acción', captionEn: 'The Human Puppet in Action', catEs: '🎪 En Escena', catEn: '🎪 On Stage', category: 'escena' },
+  { src: titereHand2, position: 'center center', captionEs: 'Sentado en la Mano Gigante', captionEn: 'Sitting on the Giant Hand', catEs: '🖐️ En Escena', catEn: '🖐️ On Stage', category: 'escena' },
+  { src: gorilaImg, position: 'center 20%', captionEs: 'Con la Gorila', captionEn: 'With the Gorilla', catEs: '🦍 El Elenco', catEn: '🦍 The Cast', category: 'elenco' },
+  { src: abogadoImg, position: 'center 15%', captionEs: 'El Abogado Payaso', captionEn: 'The Clown Lawyer', catEs: '⚖️ En Escena', catEn: '⚖️ On Stage', category: 'escena' },
+  { src: terrianImg, position: 'center 15%', captionEs: 'Acto Terrian', captionEn: 'Terrian Act', catEs: '🐕 En Escena', catEn: '🐕 On Stage', category: 'escena' },
+  { src: partyBalloonDog, position: 'center 15%', captionEs: 'Fiesta con Globos', captionEn: 'Balloon Party', catEs: '🎈 En Escena', catEn: '🎈 On Stage', category: 'escena' },
+  { src: balloonFlowers, position: 'center 15%', captionEs: 'Show al Aire Libre', captionEn: 'Outdoor Show', catEs: '🌸 En Escena', catEn: '🌸 On Stage', category: 'escena' },
+  { src: balloonArt, position: 'center 15%', captionEs: 'Arte con Globos', captionEn: 'Balloon Art', catEs: '🎨 En Escena', catEn: '🎨 On Stage', category: 'escena' },
+  { src: backstageRestaurant, position: 'center 15%', captionEs: 'Detrás de Cámaras', captionEn: 'Behind the Scenes', catEs: '📷 Backstage', catEn: '📷 Backstage', category: 'backstage' },
+  { src: backstageBalloons, position: 'center 30%', captionEs: 'Después del Show', captionEn: 'After the Show', catEs: '🎊 Backstage', catEn: '🎊 Backstage', category: 'backstage' },
+  { src: handPuppetConcept, position: 'center 10%', captionEs: 'El Concepto: Títere de Mano', captionEn: 'The Concept: Hand Puppet', catEs: '🧸 Los Muñecos', catEn: '🧸 The Toys', category: 'munecos' },
+  { src: handPuppetToy, position: 'center 15%', captionEs: 'El Muñeco Oficial', captionEn: 'The Official Puppet', catEs: '🧸 Los Muñecos', catEn: '🧸 The Toys', category: 'munecos' },
+  { src: duoParty, position: 'center 15%', captionEs: 'Con su Pareja', captionEn: 'With his Partner', catEs: '❤️ El Elenco', catEn: '❤️ The Cast', category: 'elenco' },
+  { src: fanMeetgreet, position: 'center 12%', captionEs: 'Con los Fans', captionEn: 'With the Fans', catEs: '❤️ Meet & Greet', catEn: '❤️ Meet & Greet', category: 'backstage' },
+  { src: bwPortrait, position: 'center 10%', captionEs: 'Retrato Clásico', captionEn: 'Classic Portrait', catEs: '📷 Retrato', catEn: '📷 Portrait', category: 'elenco' },
+  { src: paletaArt, position: 'center center', captionEs: 'Paleta Payaso — El Logo', captionEn: 'Paleta Payaso — The Logo', catEs: '🎨 Branding', catEn: '🎨 Branding', category: 'backstage' },
 ]
 
 const filters = [
@@ -79,7 +79,7 @@ export default function Galeria() {
           {filtered.map((photo, i) => (
             <RevealOnScroll key={`${filter}-${i}`}>
               <div className="masonry-item">
-                <img src={photo.src} alt={photo.captionEs} />
+                <img src={photo.src} alt={photo.captionEs} style={{ width: '100%', objectFit: 'cover', objectPosition: photo.position }} />
                 <div className="caption">
                   <T es={photo.captionEs} en={photo.captionEn} />
                   <br /><small><T es={photo.catEs} en={photo.catEn} /></small>
