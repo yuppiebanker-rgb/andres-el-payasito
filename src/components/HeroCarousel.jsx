@@ -12,7 +12,6 @@ import paletaArt from '../assets/images/paleta-payaso-art.png'
 import balloonArtNight from '../assets/images/balloon-art-night.png'
 import conGorila from '../assets/images/con-la-gorila.png'
 import abogado from '../assets/images/abogado-certificate.png'
-import fanMeet from '../assets/images/fan-meetgreet.png'
 import duoParty from '../assets/images/duo-party.png'
 import backstageBalloons from '../assets/images/backstage-balloons.png'
 import terrian from '../assets/images/terrian-companion.png'
@@ -27,7 +26,6 @@ const heroImages = [
   { src: balloonArtNight, alt: 'Arte con Globos', position: 'center 15%' },
   { src: balloonFlowers, alt: 'Show al Aire Libre', position: 'center 12%' },
   { src: abogado, alt: 'El Abogado Payaso', position: 'center 10%' },
-  { src: fanMeet, alt: 'Con los Fans', position: 'center 15%' },
   { src: backstageRest, alt: 'Detrás de Cámaras', position: 'center 12%' },
   { src: terrian, alt: 'Acto Terrian', position: 'center 20%' },
   { src: backstageBalloons, alt: 'Después del Show', position: 'center 25%' },

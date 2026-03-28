@@ -16,7 +16,6 @@ import backstageBalloons from '../assets/images/backstage-balloons.png'
 import handPuppetConcept from '../assets/images/hand-puppet-concept.png'
 import handPuppetToy from '../assets/images/hand-puppet-toy.png'
 import duoParty from '../assets/images/duo-party.png'
-import fanMeetgreet from '../assets/images/fan-meetgreet.png'
 import bwPortrait from '../assets/images/bw-clown-portrait.png'
 import paletaArt from '../assets/images/paleta-payaso-art.png'
 
@@ -36,7 +35,6 @@ const photos = [
   { src: handPuppetConcept, position: 'center 10%', captionEs: 'El Concepto: Títere de Mano', captionEn: 'The Concept: Hand Puppet', catEs: '🧸 Los Muñecos', catEn: '🧸 The Toys', category: 'munecos' },
   { src: handPuppetToy, position: 'center 15%', captionEs: 'El Muñeco Oficial', captionEn: 'The Official Puppet', catEs: '🧸 Los Muñecos', catEn: '🧸 The Toys', category: 'munecos' },
   { src: duoParty, position: 'center 15%', captionEs: 'Con su Pareja', captionEn: 'With his Partner', catEs: '❤️ El Elenco', catEn: '❤️ The Cast', category: 'elenco' },
-  { src: fanMeetgreet, position: 'center 12%', captionEs: 'Con los Fans', captionEn: 'With the Fans', catEs: '❤️ Meet & Greet', catEn: '❤️ Meet & Greet', category: 'backstage' },
   { src: bwPortrait, position: 'center 10%', captionEs: 'Retrato Clásico', captionEn: 'Classic Portrait', catEs: '📷 Retrato', catEn: '📷 Portrait', category: 'elenco' },
   { src: paletaArt, position: 'center center', captionEs: 'Paleta Payaso — El Logo', captionEn: 'Paleta Payaso — The Logo', catEs: '🎨 Branding', catEn: '🎨 Branding', category: 'backstage' },
 ]

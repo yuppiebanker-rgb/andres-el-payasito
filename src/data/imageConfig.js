@@ -64,11 +64,6 @@ const imageConfig = {
     circle: 'center 20%',
     gallery: 'center 15%',
   },
-  'fan-meetgreet': {
-    card: 'center 15%',
-    circle: 'center 15%',
-    gallery: 'center 12%',
-  },
   'bw-clown-portrait': {
     card: 'center 15%',
     circle: 'center 15%',
