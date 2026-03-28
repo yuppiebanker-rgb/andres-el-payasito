@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom'
 import { T } from '../components/LangContext'
 import { RevealOnScroll, Zigzag, SectionTitle, Btn } from '../components/UI'
 import { WA_LINKS, waShow } from '../utils/whatsapp'
+import HeroCarousel from '../components/HeroCarousel'
 import headshot from '../assets/images/andres-headshot.png'
 import composite from '../assets/images/andres-composite.png'
-import heroImg from '../assets/images/hero-clown-makeup.png'
 import titereHand1 from '../assets/images/titere-humano-hand-1.png'
 import abogadoImg from '../assets/images/abogado-certificate.png'
 import gorilaImg from '../assets/images/con-la-gorila.png'
@@ -61,7 +61,7 @@ export default function Home() {
       {/* HERO */}
       <section className="hero">
         <div className="hero-content">
-          <div className="hero-image-placeholder"><img src={heroImg} alt="Andrés el Payasito" /></div>
+          <HeroCarousel />
           <div className="hero-badge">🏳️‍🌈 <T es="Payaso de Clase Mundial" en="World Class Clown" /> 🏳️‍🌈</div>
           <h1>Andrés<br/>El Payasito</h1>
           <h2>— El Paleta Payaso — El Títere Humano —</h2>
