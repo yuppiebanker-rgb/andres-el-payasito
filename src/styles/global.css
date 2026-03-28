@@ -15,11 +15,24 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+/* === GLOBAL IMAGE FIX === */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+*, *::before, *::after {
+  max-width: 100vw;
+}
+
 body {
   font-family: 'Fredoka', sans-serif;
   background: var(--cream);
   color: var(--dark);
   overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
   cursor: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><text y='24' font-size='24'>🤡</text></svg>") 16 16, auto;
 }
 
@@ -653,21 +666,6 @@ footer .copyright span {
   margin: 8px 0 12px;
 }
 
-/* === RESPONSIVE === */
-@media (max-width: 768px) {
-  nav { padding: 12px 20px; flex-direction: column; gap: 10px; }
-  .nav-links { gap: 12px; justify-content: center; }
-  .page-hero { padding: 60px 20px 40px; }
-  .content-section { padding: 60px 20px; }
-  .form-row { grid-template-columns: 1fr; }
-  .gallery-masonry { columns: 1; }
-  .card-grid { grid-template-columns: 1fr; }
-  .package-grid { grid-template-columns: 1fr; }
-  .package-card.featured { transform: none; }
-  .package-card.featured:hover { transform: translateY(-8px); }
-  .stats-bar { grid-template-columns: repeat(2, 1fr); }
-}
-
 /* === LANG SYSTEM === */
 [data-lang="en"] .es { display: none; }
 [data-lang="es"] .en { display: none; }
@@ -737,14 +735,6 @@ footer .copyright span {
 .bio-avatar img { width:100%; height:100%; object-fit:cover; }
 .pride-badge { display:inline-block; background:var(--red); color:white; padding:6px 20px; border-radius:30px; font-weight:700; border:3px solid var(--dark); margin-top:20px; }
 .bio-text p { font-size:1.1rem; line-height:1.8; margin-bottom:20px; }
-@media(max-width:768px) {
-  .hero-image-placeholder { width:220px; height:220px; font-size:5rem; }
-  .show-item { flex-direction:column; text-align:center; }
-  .ticket-btn { margin-left:0; }
-  .bio-layout { grid-template-columns:1fr; }
-  .acts-grid { grid-template-columns:1fr; }
-}
-
 /* === LOS ACTOS PAGE === */
 .act-detail {
   display: grid;
@@ -783,12 +773,6 @@ footer .copyright span {
   font-weight: 700;
   border: 2px solid var(--dark);
 }
-@media(max-width:768px) {
-  .act-detail { grid-template-columns:1fr; direction:ltr !important; }
-  .act-detail > * { direction:ltr !important; }
-  .act-visual { min-height:200px; }
-}
-
 /* === BOLETOS PAGE === */
 .show-card {
   background:white; border:5px solid var(--dark); border-radius:24px; overflow:hidden;
@@ -813,13 +797,6 @@ footer .copyright span {
 }
 .show-card .ticket-area { text-align:center; padding:20px 0; }
 .show-card .ticket-area .price { font-family:'Bungee Shade',cursive; font-size:1.3rem; color:var(--red); margin-bottom:10px; }
-@media(max-width:768px) {
-  .show-card { grid-template-columns:1fr; padding:0; text-align:center; }
-  .show-card .date-block { padding:15px; }
-  .show-card .show-details { padding:0 20px; }
-  .show-card .ticket-area { padding:0 20px 20px; }
-}
-
 /* === EL ELENCO PAGE === */
 .cast-hero-card {
   display:grid; grid-template-columns:350px 1fr; gap:0;
@@ -846,8 +823,6 @@ footer .copyright span {
   display:inline-block; background:var(--yellow); color:var(--dark); padding:4px 12px;
   border-radius:15px; font-size:0.8rem; font-weight:700; margin:3px; border:2px solid var(--dark);
 }
-@media(max-width:768px) { .cast-hero-card { grid-template-columns:1fr; } .cast-hero-card .cast-photo { min-height:250px; } }
-
 /* === GALERIA PAGE === */
 .filter-bar { display:flex; justify-content:center; gap:10px; flex-wrap:wrap; margin-bottom:40px; }
 .filter-btn {
@@ -874,9 +849,6 @@ footer .copyright span {
   border:5px solid var(--dark); display:flex; align-items:center; justify-content:center; font-size:4rem;
   color:var(--yellow); box-shadow:8px 8px 0 var(--red);
 }
-@media(max-width:768px) { .masonry { columns:1; } }
-@media(min-width:769px) and (max-width:1024px) { .masonry { columns:2; } }
-
 /* === PRENSA PAGE === */
 .press-card {
   background:white; border:5px solid var(--dark); border-radius:24px; padding:35px;
@@ -901,3 +873,528 @@ footer .copyright span {
 .download-card .dl-icon { font-size:3rem; margin-bottom:10px; }
 .download-card h4 { font-family:'Permanent Marker',cursive; font-size:1rem; margin-bottom:5px; }
 .download-card p { font-size:0.8rem; color:#777; }
+
+/* ============================================================
+   RESPONSIVE — Unified 3-breakpoint system
+   Mobile: 0 - 640px
+   Tablet: 641px - 1024px
+   Desktop: 1025px+
+   ============================================================ */
+
+/* ===================== MOBILE (max-width: 640px) ===================== */
+@media (max-width: 640px) {
+
+  /* --- Nav --- */
+  .nav {
+    padding: 10px 15px;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .nav-logo { font-size: 1.1rem; }
+  .nav-links {
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .nav-links a {
+    font-size: 0.8rem;
+    padding: 4px 6px;
+  }
+  .lang-toggle {
+    font-size: 0.7rem;
+    padding: 3px 10px;
+  }
+
+  /* --- Hero --- */
+  .hero {
+    min-height: auto;
+    padding: 60px 15px 40px;
+  }
+  .hero-content {
+    padding: 15px;
+    animation: none;
+  }
+  .hero-image-placeholder {
+    width: 180px;
+    height: 180px;
+    font-size: 4rem;
+    box-shadow: 6px 6px 0 var(--red);
+    border-width: 5px;
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-size: 2.2rem;
+    text-shadow: 2px 2px 0 var(--yellow), 4px 4px 0 var(--red);
+  }
+  .hero h2 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  .hero p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    padding: 0 10px;
+  }
+  .hero .btn {
+    display: block;
+    margin: 8px auto;
+    font-size: 0.9rem;
+    padding: 12px 25px;
+    width: 90%;
+    text-align: center;
+  }
+  .hero-badge {
+    font-size: 0.7rem;
+    padding: 5px 15px;
+    letter-spacing: 1px;
+  }
+
+  /* --- Page Hero --- */
+  .page-hero {
+    padding: 50px 15px 35px;
+  }
+  .page-hero h1 {
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.2);
+  }
+  .page-hero p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  /* --- Card Grids --- */
+  .about-grid,
+  .acts-grid,
+  .cast-grid,
+  .card-grid,
+  .package-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 10px;
+  }
+  .act-card {
+    box-shadow: 5px 5px 0 var(--dark);
+    border-width: 3px;
+  }
+  .act-image { height: 200px; }
+  .act-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center top;
+  }
+  .act-body { padding: 18px; }
+  .act-body h3 { font-size: 1.2rem; }
+  .about-card {
+    padding: 25px 20px;
+    border-width: 2px;
+  }
+  .about-card .icon { font-size: 3rem; }
+  .about-card h3 { font-size: 1.2rem; }
+  .card {
+    box-shadow: 5px 5px 0 var(--dark);
+    border-width: 3px;
+  }
+  .card-image { height: 180px; }
+  .card-image img {
+    height: 180px;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  /* --- Cast Section (Home) --- */
+  .cast-section { padding: 60px 15px; }
+  .cast-avatar {
+    width: 150px;
+    height: 150px;
+    font-size: 3.5rem;
+    border-width: 4px;
+  }
+  .cast-avatar img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center top;
+  }
+  .cast-card h3 { font-size: 1.3rem; }
+  .cast-card .role { font-size: 0.8rem; }
+  .cast-card p {
+    font-size: 0.9rem;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  /* --- Shows (Home) --- */
+  .shows-section { padding: 60px 15px; }
+  .shows-list { gap: 15px; }
+  .show-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    gap: 15px;
+    border-width: 2px;
+  }
+  .show-date {
+    padding: 10px 15px;
+    min-width: auto;
+    display: inline-block;
+    border-width: 2px;
+  }
+  .show-date .day { font-size: 1.6rem; }
+  .show-info h3 { font-size: 1.1rem; }
+  .show-info p { font-size: 0.9rem; }
+  .ticket-btn {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    box-shadow: 3px 3px 0 var(--dark);
+    border-width: 2px;
+  }
+
+  /* --- LosActos act-detail --- */
+  .act-detail {
+    grid-template-columns: 1fr !important;
+    direction: ltr !important;
+    box-shadow: 5px 5px 0 var(--dark);
+    border-width: 3px;
+    margin-bottom: 25px;
+    border-radius: 16px;
+  }
+  .act-detail > * { direction: ltr !important; }
+  .act-visual {
+    min-height: 200px;
+    font-size: 4rem;
+  }
+  .act-visual img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center top;
+  }
+  .act-info { padding: 25px 20px; }
+  .act-info h2 { font-size: 1.3rem; }
+  .act-info p { font-size: 0.9rem; }
+  .act-info .highlights { gap: 6px; }
+  .act-info .highlight-tag,
+  .highlight-tag {
+    font-size: 0.7rem;
+    padding: 3px 10px;
+    border-width: 1.5px;
+  }
+
+  /* --- Boletos show-card --- */
+  .show-card {
+    grid-template-columns: 1fr !important;
+    padding: 0 !important;
+    text-align: center;
+    box-shadow: 5px 5px 0 var(--dark);
+    border-width: 3px;
+  }
+  .show-card .date-block {
+    padding: 15px;
+    min-width: auto;
+  }
+  .show-card .date-block .day { font-size: 2rem; }
+  .show-card .show-details { padding: 15px 20px; }
+  .show-card .show-details h3 { font-size: 1.1rem; }
+  .show-card .show-details .features { justify-content: center; }
+  .show-card .show-details .feature-tag {
+    font-size: 0.7rem;
+    padding: 2px 8px;
+  }
+  .show-card .ticket-area { padding: 10px 20px 20px; }
+  .show-card .ticket-area .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* --- ElElenco cast-hero-card --- */
+  .cast-hero-card {
+    grid-template-columns: 1fr !important;
+    box-shadow: 5px 5px 0 var(--dark);
+    border-width: 4px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+  }
+  .cast-hero-card .cast-photo {
+    min-height: 220px;
+    font-size: 5rem;
+  }
+  .cast-hero-card .cast-photo img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center top;
+  }
+  .cast-hero-card .cast-bio { padding: 25px 20px; }
+  .cast-hero-card .cast-bio h2 { font-size: 1.4rem; }
+  .cast-hero-card .cast-bio p { font-size: 0.9rem; }
+  .cast-hero-card .cast-bio .move-tag {
+    font-size: 0.7rem;
+    padding: 3px 8px;
+    margin: 2px;
+  }
+
+  /* --- Gallery masonry --- */
+  .masonry { columns: 1; column-gap: 0; padding: 0 10px; }
+  .masonry-item {
+    margin-bottom: 15px;
+    border-width: 3px;
+    box-shadow: 4px 4px 0 var(--dark);
+    border-radius: 12px;
+  }
+  .masonry-item img {
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center top;
+  }
+  .gallery-masonry { columns: 1; column-gap: 0; padding: 0 10px; }
+  .gallery-masonry .gallery-item {
+    margin-bottom: 15px;
+    border-width: 3px;
+    box-shadow: 4px 4px 0 var(--dark);
+    border-radius: 12px;
+  }
+  .gallery-masonry .gallery-item img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center top;
+  }
+  .gallery-masonry .gallery-item .placeholder {
+    height: 160px;
+    font-size: 2.5rem;
+  }
+  .filter-bar { gap: 6px; margin-bottom: 25px; }
+  .filter-btn {
+    padding: 6px 14px;
+    font-size: 0.8rem;
+    border-width: 2px;
+    box-shadow: 2px 2px 0 var(--dark);
+  }
+
+  /* --- Bio layout (Sobre Andrés) --- */
+  .bio-layout {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    text-align: center;
+  }
+  .bio-avatar {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    box-shadow: 6px 6px 0 var(--red);
+    border-width: 5px;
+  }
+  .bio-avatar img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center top;
+  }
+  .bio-text h2 { font-size: 1.3rem !important; }
+  .bio-text p { font-size: 1rem !important; text-align: left; }
+  .pride-badge { font-size: 0.8rem; }
+
+  /* --- Eventos Privados --- */
+  .package-card {
+    padding: 25px 20px;
+    box-shadow: 5px 5px 0 var(--dark);
+    border-width: 3px;
+  }
+  .package-card.featured { transform: none; }
+  .package-card.featured:hover { transform: translateY(-5px); }
+  .package-card .price { font-size: 1.8rem; }
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    padding: 12px 14px;
+    font-size: 0.95rem;
+    border-width: 2px;
+    border-radius: 10px;
+  }
+
+  /* --- Tienda --- */
+  .product-card {
+    box-shadow: 5px 5px 0 var(--dark);
+    border-width: 3px;
+  }
+  .product-image {
+    height: 200px;
+    font-size: 4rem;
+  }
+  .product-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .product-body { padding: 15px; }
+  .product-body h3 { font-size: 1.1rem; }
+  .product-body .product-price { font-size: 1.1rem; }
+
+  /* --- Prensa --- */
+  .download-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .download-card {
+    padding: 15px;
+    border-width: 3px;
+    box-shadow: 3px 3px 0 var(--dark);
+  }
+  .download-card .dl-icon { font-size: 2rem; }
+  .download-card h4 { font-size: 0.85rem; }
+  .press-card {
+    padding: 25px 20px;
+    box-shadow: 5px 5px 0 var(--dark);
+    border-width: 3px;
+  }
+  .bio-box { padding: 20px; border-width: 3px; }
+  .bio-box p { font-size: 0.9rem; }
+
+  /* --- Footer & global --- */
+  footer { padding: 25px 15px; }
+  footer .footer-links {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  footer .footer-links a { font-size: 0.8rem; }
+  footer .copyright { font-size: 0.75rem; }
+  .whatsapp-float {
+    width: 55px;
+    height: 55px;
+    font-size: 1.6rem;
+    bottom: 15px;
+    right: 15px;
+  }
+  .whatsapp-float .tooltip { display: none; }
+  .marquee-banner { padding: 6px 0; font-size: 0.85rem; }
+  .section-title { font-size: 1.6rem; margin-bottom: 30px; }
+  .content-section { padding: 50px 15px; }
+  .content-section.dark-bg { padding: 50px 15px; }
+  .stats-bar { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+  .stat-item .stat-number { font-size: 1.8rem; }
+  .stat-item .stat-label { font-size: 0.8rem; }
+  .zigzag { height: 25px; background-size: 25px 25px; }
+  .btn {
+    padding: 10px 25px;
+    font-size: 0.95rem;
+    border-width: 3px;
+    box-shadow: 4px 4px 0 var(--dark);
+  }
+  .testimonials-section { padding: 60px 15px; }
+  .testimonial { padding: 25px 20px; border-width: 2px; }
+  .testimonial blockquote { font-size: 1rem; }
+  .timeline { padding-left: 25px; }
+  .timeline::before { left: 8px; width: 3px; }
+  .timeline-item { padding-left: 20px; }
+  .timeline-item::before { left: -22px; width: 14px; height: 14px; border-width: 3px; }
+  .about-section { padding: 60px 15px; }
+  .acts-section { padding: 60px 15px; }
+  .shows-section { padding: 60px 15px; }
+}
+
+/* ===================== TABLET (641px - 1024px) ===================== */
+@media (min-width: 641px) and (max-width: 1024px) {
+
+  /* --- Nav --- */
+  .nav { padding: 12px 20px; }
+  .nav-links {
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .nav-links a { font-size: 0.85rem; }
+
+  /* --- Hero --- */
+  .hero {
+    min-height: 80vh;
+    padding: 80px 30px;
+  }
+  .hero-image-placeholder {
+    width: 250px;
+    height: 250px;
+    font-size: 6rem;
+  }
+  .hero h1 { font-size: 4rem; }
+
+  /* --- Page Hero --- */
+  .page-hero { padding: 60px 30px 45px; }
+  .page-hero h1 { font-size: 3rem; }
+
+  /* --- Card Grids --- */
+  .about-grid,
+  .acts-grid,
+  .card-grid,
+  .package-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  .cast-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+  .act-image { height: 220px; }
+  .act-image img {
+    height: 220px;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  /* --- Shows --- */
+  .show-item { padding: 25px; }
+
+  /* --- LosActos act-detail --- */
+  .act-detail { grid-template-columns: 1fr 1fr; }
+  .act-visual { min-height: 250px; }
+  .act-visual img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  /* --- Boletos show-card --- */
+  .show-card { grid-template-columns: 100px 1fr auto; }
+
+  /* --- ElElenco cast-hero-card --- */
+  .cast-hero-card { grid-template-columns: 280px 1fr; }
+  .cast-hero-card .cast-photo { min-height: 280px; }
+  .cast-hero-card .cast-photo img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  /* --- Gallery masonry --- */
+  .masonry { columns: 2; column-gap: 15px; }
+  .masonry-item img {
+    max-height: 350px;
+    object-fit: cover;
+  }
+  .gallery-masonry { columns: 2; column-gap: 15px; }
+  .gallery-masonry .gallery-item img {
+    max-height: 350px;
+    object-fit: cover;
+  }
+
+  /* --- Bio layout --- */
+  .bio-layout {
+    grid-template-columns: 250px 1fr;
+    gap: 35px;
+  }
+  .bio-avatar { width: 230px; height: 230px; }
+
+  /* --- Tienda --- */
+  .card-grid[style*="grid-template-columns"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
